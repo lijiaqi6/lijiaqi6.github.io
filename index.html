@@ -6,40 +6,59 @@
     <title>Jiaqi Li's Personal Website</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: #f8f9fa;
             color: #333;
+            line-height: 1.6;
         }
         .container {
-            width: 80%;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
         }
         header {
             text-align: center;
             padding: 50px 0;
+            background-color: #007bff;
+            color: #fff;
+            margin-bottom: 30px;
+            border-radius: 8px 8px 0 0;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-bottom: 0;
         }
         section {
-            margin: 40px 0;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        section:last-child {
+            border-bottom: none;
         }
         section h2 {
-            border-bottom: 2px solid #333;
+            font-size: 2em;
+            color: #007bff;
+            margin-bottom: 10px;
             padding-bottom: 10px;
+            border-bottom: 2px solid #007bff;
         }
         ul {
-            list-style-type: none;
-            padding: 0;
+            padding-left: 20px;
         }
         ul li {
-            margin: 10px 0;
+            margin-bottom: 10px;
+            font-size: 1.1em;
         }
         .columns {
             display: flex;
@@ -47,8 +66,15 @@
             gap: 20px;
         }
         .column {
-            flex: 1 1 30%; /* Adjust width as needed */
+            flex: 1;
             min-width: 200px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -56,15 +82,15 @@
     <div class="container">
         <header>
             <h1>Jiaqi Li</h1>
-            <p>3rd Year of PhD in Economics</p>
+            <p>3rd Year PhD in Economics</p>
             <p>Email: <a href="mailto:j.li.51@warwick.ac.uk">j.li.51@warwick.ac.uk</a></p>
         </header>
         <section id="welcome">
-            <p>Welcome to my personal website. I am a PhD student in Economics at the University of Warwick. Email: <a href="mailto:j.li.51@warwick.ac.uk">j.li.51@warwick.ac.uk</a></p>
+            <p>Welcome to my personal website. I am a PhD student in Economics at the University of Warwick.</p>
         </section>
         <section id="cv">
             <h2>Curriculum Vitae (CV)</h2>
-            <p><a href="cv.pdf" target="_blank">Download CV</a></p>
+            <p><a href="path_to_your_cv.pdf" target="_blank">Download CV</a></p>
         </section>
         <section id="research-interests">
             <h2>Research Interests</h2>
@@ -84,8 +110,8 @@
         <section id="supervisors">
             <h2>Supervisors</h2>
             <ul>
-                <li><a href="https://www.iza.org/person/2905/sonia-r-bhalotra" target="_blank">Sonia Bhalotra</a></li>
-                <li><a href="https://www.stefanocaria.com/" target="_blank">Stefano Caria</a></li>
+                <li>Sonia Bhalotra</li>
+                <li>Stefano Caria</li>
                 <li>Kenichi Nagasawa</li>
             </ul>
         </section>
@@ -93,9 +119,8 @@
             <h2>Shortcut to Literature</h2>
             <div class="columns">
                 <div class="column">
-                    <h3>Family Choices</h3>
+                    <h3>Family Choices and Race Studies</h3>
                     <ul>
-                        <li>Gary Becker</li>
                         <li>Duncan Thomas</li>
                         <li>Martin Browning</li>
                         <li>Nina Pavcnik</li>
@@ -124,9 +149,6 @@
                     <ul>
                         <li>Paula Bustos</li>
                         <li>Douglas Gollin</li>
-                    </ul>
-                    <h3>Race Studies</h3>
-                    <ul>
                         <li>Derek Neal</li>
                         <li>Ellora Derenoncourt</li>
                         <li>Evan Rose</li>
@@ -140,8 +162,6 @@
                         <li>Oriana Bandiera</li>
                         <li>Cheryl Doss</li>
                     </ul>
-                </div>
-                <div class="column">
                     <h3>Dynamic Discrete Choice</h3>
                     <ul>
                         <li>Jesús Fernández-Villaverde</li>
