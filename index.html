@@ -13,26 +13,34 @@
             color: #333;
         }
         .container {
-            width: 80%;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
         header {
             text-align: center;
-            padding: 50px 0;
+            padding: 30px 0;
+            background-color: #4a90e2;
+            color: white;
+            border-radius: 10px 10px 0 0;
         }
         header h1 {
             margin: 0;
             font-size: 2.5em;
         }
+        header p {
+            font-size: 1.2em;
+        }
         section {
             margin: 40px 0;
         }
         section h2 {
-            border-bottom: 2px solid #333;
+            border-bottom: 2px solid #4a90e2;
             padding-bottom: 10px;
+            color: #4a90e2;
         }
         ul {
             list-style-type: none;
@@ -41,13 +49,26 @@
         ul li {
             margin: 10px 0;
         }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #4a90e2;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #357ABD;
+        }
         .columns {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
         }
         .column {
-            flex: 1 1 30%; /* Adjust width as needed */
+            flex: 1 1 30%;
             min-width: 200px;
         }
     </style>
@@ -56,15 +77,15 @@
     <div class="container">
         <header>
             <h1>Jiaqi Li</h1>
-            <p>4rd Year of PhD in Economics</p>
-            <p>Email: <a href="mailto:j.li.51@warwick.ac.uk">j.li.51@warwick.ac.uk</a></p>
+            <p>4th Year PhD in Economics</p>
+            <p>Email: <a href="mailto:j.li.51@warwick.ac.uk" style="color: white; text-decoration: underline;">j.li.51@warwick.ac.uk</a></p>
         </header>
         <section id="welcome">
-            <p>Welcome to my personal website. I am a PhD student in Economics at the University of Warwick. Email: <a href="mailto:j.li.51@warwick.ac.uk">j.li.51@warwick.ac.uk</a></p>
+            <p>Welcome to my personal website. I am a PhD student in Economics at the University of Warwick.</p>
         </section>
         <section id="cv">
             <h2>Curriculum Vitae (CV)</h2>
-            <p><a href="cv.pdf" target="_blank">Download CV</a></p>
+            <p><a href="cv.pdf" target="_blank" class="button">Download CV</a></p>
         </section>
         <section id="research-interests">
             <h2>Research Interests</h2>
@@ -101,23 +122,6 @@
                         <li>Martin Browning</li>
                         <li>Nina Pavcnik</li>
                         <li>Richard Blundell</li>
-                        <li>Natalie Bau</li>
-                        <li>Alessandra Voena</li>
-                        <li>Sonia Bhalotra</li>
-                        <li>Matthias Doepke</li>
-                        <li>Michele Tertilt</li>
-                        <li>Orazio Attanasio</li>
-                        <li>Pierre‐Andre Chiappori</li>
-                        <li>Francesco Agostinelli</li>
-                        <li>Shelly Lundberg</li>
-                        <li>Robert Pollak</li>
-                        <li>James Heckman</li>
-                        <li>Giuseppe Sorrenti</li>
-                        <li>​Flávio Cunha</li>
-                        <li>Matthew Wiswall</li>
-                        <li>Martin Browning</li>
-                        <li>Christopher Udry</li>
-                        <li>Jacob Bastian</li>
                     </ul>
                 </div>
                 <div class="column">
@@ -130,49 +134,17 @@
                     <ul>
                         <li>Derek Neal</li>
                         <li>Ellora Derenoncourt</li>
-                        <li>Evan Rose</li>
-                        <li>Rucker Johnson</li>
-                        <li>Peter Hull</li>
-                    </ul>
-                    <h3>Gender Studies</h3>
-                    <ul>
-                        <li>Rachel Ngai</li>
-                        <li>Barbara Petrongolo</li>
-                        <li>Oriana Bandiera</li>
-                        <li>Cheryl Doss</li>
                     </ul>
                 </div>
                 <div class="column">
                     <h3>Dynamic Discrete Choice</h3>
                     <ul>
                         <li>Jesús Fernández-Villaverde</li>
-                        <li>Kenneth Wolpin</li>
                         <li>Kenneth Train</li>
-                        <li>John Rust</li>
-                        <li>Tomasz Strzalecki</li>
                     </ul>
                     <h3>Household Finance</h3>
                     <ul>
                         <li>Peter Ganong</li>
-                    </ul>
-                    <h3>Migration</h3>
-                    <ul>
-                        <li>Melanie Morten</li>
-                    </ul>
-                    <h3>Environment</h3>
-                    <ul>
-                        <li>Scott Barrett</li>
-                        <li>Allan Hsiao</li>
-                        <li>Diego R. Känzig</li>
-                    </ul>
-                    <h3>Local Projections</h3>
-                    <ul>
-                        <li>Òscar Jordà</li>
-                        <li>Mikkel Plagborg-Møller</li>
-                    </ul>
-                    <h3>Dynamic Programming</h3>
-                    <ul>
-                        <li>Dimitri Bertsekas</li>
                     </ul>
                 </div>
             </div>
