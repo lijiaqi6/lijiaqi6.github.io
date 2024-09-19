@@ -11,159 +11,148 @@
     <style>
         body {
             font-family: 'Merriweather', serif;
-            font-size: 16px; /* Slightly larger default font size */
+            font-size: 16px;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
             color: #2c3e50;
-            line-height: 1.75; /* Improved line spacing for readability */
+            line-height: 1.75;
+            background-color: #f9f9fb;
         }
+
+        /* Full-width sections */
+        section {
+            padding: 60px 20px;
+        }
+        
         .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-            border-radius: 8px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #34495e;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #1abc9c;
+        }
+
         header {
             text-align: center;
-            padding: 20px 0;
+            padding: 100px 0;
             background-color: #34495e;
             color: white;
-            border-radius: 8px 8px 0 0;
         }
+
         header h1 {
-            margin: 0;
-            font-size: 2.4em; /* Larger heading */
-            font-weight: 600; /* Bolder heading */
+            font-size: 3em;
+            font-weight: 700;
         }
+
         header p {
-            font-size: 1.1em;
-            margin: 5px 0;
-        }
-        header a {
-            color: #e0e0e0; /* Set a lighter color to make it visible */
-            text-decoration: underline; /* Underline for clarity */
-        }
-        section {
-            margin: 40px 0; /* Increased margin between sections */
-        }
-        section h2 {
-            border-bottom: 2px solid #34495e;
-            padding-bottom: 10px;
-            color: #34495e;
-            font-size: 1.5em;
-            margin-bottom: 15px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
+            font-size: 1.3em;
             margin: 10px 0;
-            font-size: 1em;
         }
+
+        /* Section with background */
+        #research-interests {
+            background-color: #e8f8f5;
+        }
+
+        /* Buttons */
         a.button {
             display: inline-block;
-            padding: 2px 4px;                /* Slightly larger padding for button */
-            background-color: #34495e;       /* Dark blue-gray background color */
-            color: white;                    /* White text */
-            text-decoration: underline;      /* Adds underline to the link */
-            border-radius: 5px;              /* More rounded corners (5px) */
-            font-size: 1em;                  /* Normal font size */
-            font-weight: 500;                /* Bolder button text */
-            transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition when background color changes */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow to make the button stand out */
-        }
-        a.button:hover {
-            background-color: #2c3e50;       /* Darker background when hovered */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
-        }
-        .columns {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .column {
-            flex: 1 1 45%;
-            min-width: 200px;
-        }
-        .column ul li {
-            margin: 8px 0;
-        }
-        a {
-            color: #34495e;
-            text-decoration: none;
-            transition: color 0.3s; /* Smooth color change on hover */
-        }
-        a:hover {
-            color: #2c3e50;
-            text-decoration: underline;
-        }
-        footer {
-            text-align: center;
-            padding: 10px 0;
+            padding: 10px 20px;
             background-color: #34495e;
             color: white;
-            margin-top: 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
+        a.button:hover {
+            background-color: #2c3e50;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #34495e;
+            color: white;
+        }
+
         footer a {
             color: #e0e0e0;
             text-decoration: none;
         }
+
         footer a:hover {
             text-decoration: underline;
         }
+
         @media (max-width: 768px) {
-            .container {
-                max-width: 95%; /* Increase width for smaller screens */
-            }
             header h1 {
-                font-size: 1.8em; /* Adjust heading size for mobile */
-            }
-            a.button {
-                padding: 5px 10px; /* Larger buttons for easier taps */
+                font-size: 2.2em;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Jiaqi Li</h1>
-            <p>4th Year PhD in Economics</p>
-            <p>Email: <a href="mailto:j.li.51@warwick.ac.uk"><i class="fas fa-envelope"></i> j.li.51@warwick.ac.uk</a></p>
-        </header>
-        <section id="welcome">
-            <p>Welcome to my personal website. I am a PhD student in Economics at the University of Warwick.</p>
-        
-        <section id="research-interests">
+    <nav>
+        <a href="#research-interests">Research Interests</a>
+        <a href="#papers">Research Papers</a>
+        <a href="#supervisors">Supervisors</a>
+    </nav>
+
+    <header>
+        <h1>Jiaqi Li</h1>
+        <p>4th Year PhD in Economics</p>
+        <p>Email: <a href="mailto:j.li.51@warwick.ac.uk" style="color: #1abc9c"><i class="fas fa-envelope"></i> j.li.51@warwick.ac.uk</a></p>
+    </header>
+
+    <section id="research-interests">
+        <div class="container">
             <h2>Research Interests</h2>
             <p>Family economics. Quantitative macro. Structural labor. Applied micro.</p>
             <p><a href="cv.pdf" target="_blank" class="button"><i class="fas fa-file-download"></i> Curriculum Vitae</a></p>
-        </section>
+        </div>
+    </section>
 
-        <section id="papers">
+    <section id="papers">
+        <div class="container">
             <h2>Research Papers</h2>
             <ul>
                 <li><strong>Racial Difference in Marriage Uncertainty and Employment</strong> 
-                2024 <a href="li_race.pdf" target="_blank" class="button"><i class="fas fa-file-pdf"></i> PDF</a></li>
+                2024 <a href="li_race.pdf" target="_blank" class="button"><i class="fas fa-file-pdf"></i> Download PDF</a></li>
             </ul>
-        </section>
+        </div>
+    </section>
 
-        <section id="supervisors">
+    <section id="supervisors">
+        <div class="container">
             <h2>Supervisors</h2>
             <ul>
                 <li><a href="https://www.iza.org/person/2905/sonia-r-bhalotra" target="_blank">Sonia Bhalotra</a></li>
                 <li><a href="https://www.stefanocaria.com/" target="_blank">Stefano Caria</a></li>
                 <li>Kenichi Nagasawa</li>
             </ul>
-        </section>
-    </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Jiaqi Li | <a href="https://warwick.ac.uk/fac/soc/economics/staff/jli/" target="_blank">Warwick</a> </p>
+        <p>&copy; 2024 Jiaqi Li | <a href="https://warwick.ac.uk/fac/soc/economics/staff/jli/" target="_blank">Warwick</a></p>
     </footer>
 </body>
 </html>
