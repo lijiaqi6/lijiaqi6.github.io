@@ -88,13 +88,13 @@
         }
 
         .block-right h2 {
-            font-size: 1.6em;
+            font-size: 1.2em; /* Reduced size for consistency */
             margin-bottom: 10px;
         }
 
         .block-right p {
             margin-bottom: 15px;
-            font-size: 1.1em;
+            font-size: 1.1em; /* Consistent with the rest of the text */
         }
 
         .block-right a.button {
@@ -103,14 +103,15 @@
             background-color: #34495e;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s, box-shadow 0.3s;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 25px; /* Cute rounded button */
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         }
 
         .block-right a.button:hover {
             background-color: #2c3e50;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px); /* Floating effect */
         }
 
         footer {
@@ -169,7 +170,7 @@
             <h2>Research Papers</h2>
             <ul>
                 <li><strong>Racial Difference in Marriage Uncertainty and Employment</strong> 
-                , 2024 <a href="li_race.pdf" target="_blank" class="research-link"><i class="fas fa-file-pdf"></i> PDF</a></li>
+                2024 <a href="li_race.pdf" target="_blank" class="button"><i class="fas fa-file-pdf"></i> PDF</a></li>
             </ul>
         </div>
     </section>
