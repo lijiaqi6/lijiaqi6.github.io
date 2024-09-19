@@ -7,16 +7,14 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Merriweather', serif;
             font-size: 16px;
             margin: 0;
             padding: 0;
-            color: #000000;
-            line-height: 1.75;
             background-color: #f9f9fb;
+            color: #34495e;
         }
 
         /* Full-width sections */
@@ -47,62 +45,71 @@
             color: #1abc9c;
         }
 
-        /* Header and Research Interests in One Block with Columns and Shared Background */
-        .columns {
+        /* Harmonized Header and Research Interests */
+        .header-container {
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+            justify-content: space-between;
+            align-items: flex-start;
             background-color: #f0f0f0;
             padding: 20px;
             border-radius: 8px;
         }
 
-        .column {
-            flex: 1 1 45%;
-            min-width: 200px;
+        .header-left {
+            flex: 1;
         }
 
-        header {
-            color: #34495e;
-            font-size: 1.1em;
-        }
-
-        .name {
-            font-size: 2em;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-
-        .department {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-
-        .email {
-            font-size: 1.1em;
+        .header-right {
             text-align: right;
+            flex-shrink: 0;
         }
 
-        .email a {
-            color: inherit; /* Keep the link color consistent with the rest of the text */
+        .header-left .name {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .header-left .department {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+
+        .header-left .phd-details {
+            font-size: 1.1em;
+            margin: 10px 0 0;
+        }
+
+        .header-right .email {
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+
+        .header-right .email a {
+            color: inherit; /* Same color as the text */
             text-decoration: none;
         }
 
-        .email a:hover {
+        .header-right .email a:hover {
             text-decoration: underline;
         }
 
-        .column-content h2 {
+        .research-interests {
+            margin-top: 30px;
+        }
+
+        .research-interests h2 {
             font-size: 1.6em;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             color: #34495e;
         }
 
-        .column-content p {
+        .research-interests p {
             margin-bottom: 15px;
+            font-size: 1.1em;
         }
 
-        .column-content a.button {
+        .research-interests a.button {
             display: inline-block;
             padding: 8px 16px;
             background-color: #34495e;
@@ -113,7 +120,7 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .column-content a.button:hover {
+        .research-interests a.button:hover {
             background-color: #2c3e50;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
         }
@@ -135,16 +142,18 @@
         }
 
         @media (max-width: 768px) {
-            .columns {
+            .header-container {
                 flex-direction: column;
+                align-items: center;
+                text-align: center;
             }
 
-            header h1 {
-                font-size: 2em;
+            .header-right {
+                text-align: center;
             }
 
             .email {
-                text-align: left; /* Center the email on smaller screens */
+                margin-top: 15px;
             }
         }
     </style>
@@ -156,22 +165,23 @@
 
     <section id="intro-and-interests">
         <div class="container">
-            <div class="columns">
-                <div class="column">
-                    <header>
-                        <div class="name">Jiaqi Li</div>
-                        <div class="department">Department of Economics, University of Warwick</div>
-                        <p>4th Year PhD in Economics</p>
-                    </header>
+            <div class="header-container">
+                <div class="header-left">
+                    <div class="name">Jiaqi Li</div>
+                    <div class="department">Department of Economics, University of Warwick</div>
+                    <div class="phd-details">4th Year PhD in Economics</div>
                 </div>
-                <div class="column email">
-                    <p>Email: <a href="mailto:j.li.51@warwick.ac.uk"><i class="fas fa-envelope"></i> j.li.51@warwick.ac.uk</a></p>
+                <div class="header-right">
+                    <div class="email">
+                        Email: <a href="mailto:j.li.51@warwick.ac.uk"><i class="fas fa-envelope"></i> j.li.51@warwick.ac.uk</a>
+                    </div>
                 </div>
-                <div class="column column-content">
-                    <h2>Research Interests</h2>
-                    <p>Family economics. Quantitative macro. Structural labor. Applied micro.</p>
-                    <p><a href="cv.pdf" target="_blank" class="button"><i class="fas fa-file-download"></i> Curriculum Vitae</a></p>
-                </div>
+            </div>
+
+            <div class="research-interests">
+                <h2>Research Interests</h2>
+                <p>Family economics. Quantitative macro. Structural labor. Applied micro.</p>
+                <p><a href="cv.pdf" target="_blank" class="button"><i class="fas fa-file-download"></i> Curriculum Vitae</a></p>
             </div>
         </div>
     </section>
