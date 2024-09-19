@@ -98,25 +98,38 @@
             font-size: 1.1em; /* Consistent with the rest of the text */
         }
 
-        /* PDF button as a symbol */
+        /* CV download button */
+        .block-right a.button {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #34495e;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .block-right a.button:hover {
+            background-color: #2c3e50;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        /* PDF symbol only */
         .research-paper {
             font-size: 1.1em;
             margin-bottom: 10px;
         }
 
         .pdf-button {
-            display: inline-block;
             font-size: 1.5em;
-            padding: 10px;
-            color: white;
-            background-color: #34495e;
-            border-radius: 50%;
-            transition: background-color 0.3s, transform 0.3s;
+            color: #34495e;
+            transition: color 0.3s, transform 0.3s;
         }
 
         .pdf-button:hover {
-            background-color: #2c3e50;
-            transform: translateY(-3px); /* Floating effect */
+            color: #1abc9c;
+            transform: translateY(-2px); /* Floating effect */
         }
 
         footer {
