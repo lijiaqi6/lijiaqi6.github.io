@@ -289,6 +289,38 @@
             gap: 2rem;
         }
 
+        .research-category {
+            margin-bottom: 4rem;
+        }
+
+        .category-title {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-family: var(--font-display);
+            font-weight: 500;
+            line-height: 1.3;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .paper-authors {
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .paper-authors a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .paper-authors a:hover {
+            text-decoration: underline;
+        }
+
         .paper-card {
             background: white;
             border-radius: 16px;
@@ -553,6 +585,88 @@
         html {
             scroll-behavior: smooth;
         }
+
+        .research-category {
+            margin-bottom: 4rem;
+        }
+
+        .category-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+            position: relative;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .category-papers {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .category-paper {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .category-paper:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .category-paper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 12px 12px 0 0;
+        }
+
+        .paper-status {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .status-working {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .status-progress {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .status-resting {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
     </style>
 </head>
 <body>
@@ -572,12 +686,17 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1 class="hero-name">Jiaqi Li</h1>
-                    <p class="hero-title">PhD Candidate in Economics</p>
+                    <p class="hero-title">4th Year PhD Candidate in Economics</p>
                     <p class="hero-department">Department of Economics, University of Warwick</p>
                     
                     <div class="hero-contact" id="contact">
                         <div class="label">Email</div>
                         <a href="mailto:j.li.51@warwick.ac.uk">j.li.51@warwick.ac.uk</a>
+                    </div>
+                    
+                    <div class="hero-contact">
+                        <div class="label">Google Scholar</div>
+                        <a href="https://scholar.google.com/citations?user=RhYPHAkAAAAJ&hl=en" target="_blank">View Publications</a>
                     </div>
                 </div>
                 
@@ -586,7 +705,8 @@
                         <h2 class="panel-title">Research Interests</h2>
                     </div>
                     <p class="research-interests">
-                        Family economics, quantitative macroeconomics, structural labor economics, and applied microeconomics.
+                        <strong>Primary fields:</strong><br>
+                        Structural Labor, Development Economics
                     </p>
                     <a href="cv.pdf" target="_blank" class="btn-primary">
                         <i class="fas fa-file-download"></i>
@@ -600,27 +720,104 @@
     <section class="section-papers" id="research">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Research Papers</h2>
-                <p class="section-subtitle">Latest publications and working papers</p>
+                <h2 class="section-title">Research</h2>
+                <p class="section-subtitle">Working papers, work-in-progress, and publications</p>
             </div>
             
-            <div class="papers-grid">
-                <article class="paper-card">
-                    <div class="paper-meta">
-                        <span class="paper-year-badge">2024</span>
-                        <span class="paper-status">Working Paper</span>
-                    </div>
-                    <h3 class="paper-title">Racial Difference in Marriage Uncertainty and Employment</h3>
-                    <p class="paper-abstract">
-                        This paper examines the relationship between marriage uncertainty and employment decisions across different racial groups, exploring how cultural and economic factors influence labor market participation.
-                    </p>
-                    <div class="paper-actions">
-                        <a href="li_race.pdf" target="_blank" class="btn-secondary">
-                            <i class="fas fa-file-pdf"></i>
-                            View PDF
-                        </a>
-                    </div>
-                </article>
+            <!-- Working Papers -->
+            <div class="research-category">
+                <h3 class="category-title">Working Papers</h3>
+                <div class="papers-grid">
+                    <article class="paper-card">
+                        <div class="paper-meta">
+                            <span class="paper-year-badge">2024</span>
+                            <span class="paper-status">Working Paper</span>
+                        </div>
+                        <h4 class="paper-title">Can Structural Transformation Increase Female Bargaining Power?</h4>
+                        <p class="paper-authors">with <a href="https://www.qianxue-zhang.com/" target="_blank">Zoe Zhang</a></p>
+                        <div class="paper-actions">
+                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4955252" target="_blank" class="btn-secondary">
+                                <i class="fas fa-file-pdf"></i>
+                                View PDF
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Work in Progress -->
+            <div class="research-category">
+                <h3 class="category-title">Work in Progress</h3>
+                <div class="papers-grid">
+                    <article class="paper-card">
+                        <div class="paper-meta">
+                            <span class="paper-status">In Progress</span>
+                        </div>
+                        <h4 class="paper-title">The Shadow Child Penalty and Racial Inequality in Labour‑ and Marriage‑Market Risk</h4>
+                    </article>
+                    
+                    <article class="paper-card">
+                        <div class="paper-meta">
+                            <span class="paper-status">In Progress</span>
+                        </div>
+                        <h4 class="paper-title">Structural Transformation and Marriage Market</h4>
+                        <p class="paper-authors">with <a href="https://sites.google.com/view/rachelngai/home" target="_blank">Rachel Ngai</a></p>
+                    </article>
+                    
+                    <article class="paper-card">
+                        <div class="paper-meta">
+                            <span class="paper-status">In Progress</span>
+                        </div>
+                        <h4 class="paper-title">International Trade and Intrahousehold Bargaining</h4>
+                        <p class="paper-authors">with <a href="https://www.ucl.ac.uk/~uctp39a/" target="_blank">Richard Blundell</a></p>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Resting Papers -->
+            <div class="research-category">
+                <h3 class="category-title">Resting Papers</h3>
+                <div class="papers-grid">
+                    <article class="paper-card">
+                        <div class="paper-meta">
+                            <span class="paper-status">Resting</span>
+                        </div>
+                        <h4 class="paper-title">Flooding, Inflation and International Spillover</h4>
+                        <div class="paper-actions">
+                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4816569" target="_blank" class="btn-secondary">
+                                <i class="fas fa-file-pdf"></i>
+                                View PDF
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <article class="paper-card">
+                        <div class="paper-meta">
+                            <span class="paper-status">Resting</span>
+                        </div>
+                        <h4 class="paper-title">Extreme Weather, Household Finance, and Child Labor: Evidence in Ethiopia</h4>
+                        <div class="paper-actions">
+                            <a href="https://warwick.ac.uk/fac/soc/economics/staff/jli/_new__climate_change__child_labour_and_schooling__global_evidence.pdf" target="_blank" class="btn-secondary">
+                                <i class="fas fa-file-pdf"></i>
+                                View PDF
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <article class="paper-card">
+                        <div class="paper-meta">
+                            <span class="paper-status">Resting</span>
+                        </div>
+                        <h4 class="paper-title">Fathers, Time Investment and Human Capital Inequality</h4>
+                        <p class="paper-authors">with Yaolang Zhong</p>
+                        <div class="paper-actions">
+                            <a href="fathers.pdf" target="_blank" class="btn-secondary">
+                                <i class="fas fa-file-pdf"></i>
+                                View PDF
+                            </a>
+                        </div>
+                    </article>
+                </div>
             </div>
         </div>
     </section>
