@@ -8,13 +8,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Advanced CSS Custom Properties -->
     <style>
         :root {
             --primary-color: #1a202c;
             --secondary-color: #2d3748;
             --accent-color: #4a5568;
-            --text-primary: #1a202c;
-            --text-secondary: #4a5568;
+            --text-primary:     <section class="section-supervisors" id="supervisors">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title display-2">Supervisors</h2>
+                <p class="section-subtitle body-large">Distinguished faculty guiding my research</p>
+            </div>
+            
+            <div class="supervisors-grid">
+                <div class="supervisor-card">
+                    <div class="supervisor-avatar">SB</div>
+                    <h3 class="supervisor-name heading-2">Sonia Bhalotra</h3>
+                    <p class="supervisor-title">Professor of Economics</p>
+                    <a href="https://www.iza.org/person/2905/sonia-r-bhalotra" target="_blank" class="supervisor-link">
+                        View Profile <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <div class="supervisor-card">
+                    <div class="supervisor-avatar">SC</div>
+                    <h3 class="supervisor-name heading-2">Stefano Caria</h3>
+                    <p class="supervisor-title">Associate Professor of Economics</p>
+                    <a href="https://www.stefanocaria.com/" target="_blank" class="supervisor-link">
+                        View Profile <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <div class="supervisor-card">
+                    <div class="supervisor-avatar">JF</div>
+                    <h3 class="supervisor-name heading-2">James Fenske</h3>
+                    <p class="supervisor-title">Professor of Economics</p>
+                    <a href="https://warwick.ac.uk/fac/soc/economics/staff/jefenske/" target="_blank" class="supervisor-link">
+                        View Profile <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>         --text-secondary: #4a5568;
             --text-muted: #718096;
             --background: #ffffff;
             --surface: #f7fafc;
@@ -25,7 +61,8 @@
             --font-display: 'Playfair Display', serif;
             --font-body: 'Inter', sans-serif;
         }
-
+    </style>
+        /* Advanced Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -44,6 +81,34 @@
             overflow-x: hidden;
         }
 
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--surface);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-color);
+        }
+
+        /* Advanced Typography */
+        .display-1 { font-size: clamp(2.5rem, 5vw, 4rem); font-family: var(--font-display); font-weight: 700; line-height: 1.1; }
+        .display-2 { font-size: clamp(2rem, 4vw, 3rem); font-family: var(--font-display); font-weight: 600; line-height: 1.2; }
+        .heading-1 { font-size: clamp(1.5rem, 3vw, 2rem); font-family: var(--font-display); font-weight: 500; line-height: 1.3; }
+        .heading-2 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); font-family: var(--font-body); font-weight: 600; line-height: 1.4; }
+        .body-large { font-size: 1.125rem; font-weight: 400; line-height: 1.7; }
+        .body-regular { font-size: 1rem; font-weight: 400; line-height: 1.6; }
+        .body-small { font-size: 0.875rem; font-weight: 400; line-height: 1.5; }
+
+        /* Advanced Layout System */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -55,6 +120,7 @@
             position: relative;
         }
 
+        /* Sophisticated Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -66,6 +132,11 @@
             z-index: 1000;
             transition: var(--transition);
             padding: 1rem 0;
+        }
+
+        nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow);
         }
 
         .nav-container {
@@ -103,10 +174,26 @@
             position: relative;
         }
 
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: var(--transition);
+        }
+
         .nav-links a:hover {
             color: var(--text-primary);
         }
 
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section with Advanced Design */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -114,6 +201,19 @@
             background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
             position: relative;
             overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.03) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0.03) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 80%, rgba(120, 119, 198, 0.03) 0%, transparent 50%);
+            opacity: 0.5;
         }
 
         .hero-content {
@@ -130,10 +230,6 @@
         }
 
         .hero-name {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-family: var(--font-display);
-            font-weight: 700;
-            line-height: 1.1;
             margin-bottom: 1rem;
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             -webkit-background-clip: text;
@@ -143,14 +239,12 @@
         }
 
         .hero-title {
-            font-size: clamp(1.25rem, 2.5vw, 1.5rem);
             color: var(--text-secondary);
             margin-bottom: 0.75rem;
             font-weight: 500;
         }
 
         .hero-department {
-            font-size: 1.125rem;
             color: var(--text-muted);
             margin-bottom: 2rem;
             font-weight: 400;
@@ -190,6 +284,7 @@
             color: var(--secondary-color);
         }
 
+        /* Advanced Info Panel */
         .info-panel {
             background: white;
             border-radius: 16px;
@@ -210,11 +305,12 @@
             background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
         }
 
+        .panel-header {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
         .panel-title {
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            font-family: var(--font-display);
-            font-weight: 500;
-            line-height: 1.3;
             margin-bottom: 1rem;
             color: var(--text-primary);
         }
@@ -231,12 +327,12 @@
         }
 
         .research-interests {
-            font-size: 1.125rem;
             margin-bottom: 2rem;
             line-height: 1.8;
             color: var(--text-secondary);
         }
 
+        /* Advanced Button Design */
         .btn-primary {
             display: inline-flex;
             align-items: center;
@@ -252,6 +348,19 @@
             text-transform: uppercase;
             transition: var(--transition);
             box-shadow: 0 4px 14px 0 rgba(26, 32, 44, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
         }
 
         .btn-primary:hover {
@@ -259,31 +368,34 @@
             box-shadow: 0 8px 25px 0 rgba(26, 32, 44, 0.3);
         }
 
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        /* Advanced Section Styling */
         .section-papers, .section-supervisors {
             background: var(--surface);
+            position: relative;
         }
 
         .section-header {
             text-align: center;
             margin-bottom: 4rem;
+            position: relative;
         }
 
         .section-title {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-family: var(--font-display);
-            font-weight: 600;
-            line-height: 1.2;
             margin-bottom: 1rem;
             color: var(--text-primary);
         }
 
         .section-subtitle {
-            font-size: 1.125rem;
             color: var(--text-muted);
             max-width: 600px;
             margin: 0 auto;
         }
 
+        /* Advanced Paper Cards */
         .papers-grid {
             display: grid;
             gap: 2rem;
@@ -296,6 +408,8 @@
             box-shadow: var(--shadow);
             border: 1px solid var(--border);
             transition: var(--transition);
+            position: relative;
+            overflow: hidden;
         }
 
         .paper-card::before {
@@ -338,17 +452,12 @@
         }
 
         .paper-title {
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            font-family: var(--font-display);
-            font-weight: 500;
-            line-height: 1.3;
             margin-bottom: 1rem;
             color: var(--text-primary);
             line-height: 1.4;
         }
 
         .paper-abstract {
-            font-size: 1rem;
             color: var(--text-secondary);
             line-height: 1.7;
             margin-bottom: 2rem;
@@ -380,6 +489,7 @@
             transform: translateY(-1px);
         }
 
+        /* Advanced Supervisors Grid */
         .supervisors-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -428,10 +538,6 @@
         }
 
         .supervisor-name {
-            font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-            font-family: var(--font-body);
-            font-weight: 600;
-            line-height: 1.4;
             margin-bottom: 0.5rem;
             color: var(--text-primary);
         }
@@ -453,11 +559,23 @@
             color: var(--secondary-color);
         }
 
+        /* Advanced Footer */
         .footer {
             background: var(--primary-color);
             color: white;
             padding: 3rem 0 2rem;
             margin-top: 5rem;
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
         }
 
         .footer-content {
@@ -465,7 +583,6 @@
         }
 
         .footer-text {
-            font-size: 1.125rem;
             margin-bottom: 1rem;
             opacity: 0.9;
         }
@@ -495,6 +612,7 @@
             padding-top: 2rem;
         }
 
+        /* Advanced Responsive Design */
         @media (max-width: 1024px) {
             .hero-content {
                 grid-template-columns: 1fr;
@@ -550,8 +668,73 @@
             }
         }
 
+        /* Advanced Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .animate-slide-left {
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        .animate-slide-right {
+            animation: slideInRight 0.8s ease-out;
+        }
+
+        /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
+        }
+
+        /* Focus styles for accessibility */
+        *:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+            nav, .footer {
+                display: none;
+            }
+            
+            .hero {
+                min-height: auto;
+                padding: 2rem 0;
+            }
         }
     </style>
 </head>
@@ -569,11 +752,11 @@
 
     <section class="hero" id="home">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-name">Jiaqi Li</h1>
-                    <p class="hero-title">PhD Candidate in Economics</p>
-                    <p class="hero-department">Department of Economics, University of Warwick</p>
+            <div class="hero-content animate-fade-in">
+                <div class="hero-text animate-slide-left">
+                    <h1 class="hero-name display-1">Jiaqi Li</h1>
+                    <p class="hero-title heading-2">PhD Candidate in Economics</p>
+                    <p class="hero-department body-large">Department of Economics, University of Warwick</p>
                     
                     <div class="hero-contact" id="contact">
                         <div class="label">Email</div>
@@ -581,11 +764,11 @@
                     </div>
                 </div>
                 
-                <div class="info-panel">
+                <div class="info-panel animate-slide-right">
                     <div class="panel-header">
-                        <h2 class="panel-title">Research Interests</h2>
+                        <h2 class="panel-title heading-1">Research Interests</h2>
                     </div>
-                    <p class="research-interests">
+                    <p class="research-interests body-large">
                         Family economics, quantitative macroeconomics, structural labor economics, and applied microeconomics.
                     </p>
                     <a href="cv.pdf" target="_blank" class="btn-primary">
@@ -600,8 +783,8 @@
     <section class="section-papers" id="research">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Research Papers</h2>
-                <p class="section-subtitle">Latest publications and working papers</p>
+                <h2 class="section-title display-2">Research Papers</h2>
+                <p class="section-subtitle body-large">Latest publications and working papers</p>
             </div>
             
             <div class="papers-grid">
@@ -610,8 +793,8 @@
                         <span class="paper-year-badge">2024</span>
                         <span class="paper-status">Working Paper</span>
                     </div>
-                    <h3 class="paper-title">Racial Difference in Marriage Uncertainty and Employment</h3>
-                    <p class="paper-abstract">
+                    <h3 class="paper-title heading-1">Racial Difference in Marriage Uncertainty and Employment</h3>
+                    <p class="paper-abstract body-regular">
                         This paper examines the relationship between marriage uncertainty and employment decisions across different racial groups, exploring how cultural and economic factors influence labor market participation.
                     </p>
                     <div class="paper-actions">
@@ -625,48 +808,23 @@
         </div>
     </section>
 
-    <section class="section-supervisors" id="supervisors">
+    <section id="supervisors">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Supervisors</h2>
-                <p class="section-subtitle">Distinguished faculty guiding my research</p>
+                <h2>Supervisors</h2>
             </div>
-            
-            <div class="supervisors-grid">
-                <div class="supervisor-card">
-                    <div class="supervisor-avatar">SB</div>
-                    <h3 class="supervisor-name">Sonia Bhalotra</h3>
-                    <p class="supervisor-title">Professor of Economics</p>
-                    <a href="https://www.iza.org/person/2905/sonia-r-bhalotra" target="_blank" class="supervisor-link">
-                        View Profile <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-                
-                <div class="supervisor-card">
-                    <div class="supervisor-avatar">SC</div>
-                    <h3 class="supervisor-name">Stefano Caria</h3>
-                    <p class="supervisor-title">Associate Professor of Economics</p>
-                    <a href="https://www.stefanocaria.com/" target="_blank" class="supervisor-link">
-                        View Profile <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-                
-                <div class="supervisor-card">
-                    <div class="supervisor-avatar">JF</div>
-                    <h3 class="supervisor-name">James Fenske</h3>
-                    <p class="supervisor-title">Professor of Economics</p>
-                    <a href="https://warwick.ac.uk/fac/soc/economics/staff/jefenske/" target="_blank" class="supervisor-link">
-                        View Profile <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
+            <ul class="supervisors-list">
+                <li><a href="https://www.iza.org/person/2905/sonia-r-bhalotra" target="_blank">Sonia Bhalotra</a></li>
+                <li><a href="https://www.stefanocaria.com/" target="_blank">Stefano Caria</a></li>
+                <li><a href="https://warwick.ac.uk/fac/soc/economics/staff/jefenske/" target="_blank"></a>James Fenske</a></li>
+            </ul>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p class="footer-text">Jiaqi Li - PhD Candidate in Economics</p>
+                <p class="footer-text body-large">Jiaqi Li - PhD Candidate in Economics</p>
                 <div class="footer-links">
                     <a href="https://warwick.ac.uk/fac/soc/economics/staff/jli/" target="_blank" class="footer-link">
                         University Profile
@@ -686,6 +844,7 @@
     </footer>
 
     <script>
+        // Advanced navbar scroll effect
         window.addEventListener('scroll', function() {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
@@ -695,6 +854,7 @@
             }
         });
 
+        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -706,6 +866,29 @@
                     });
                 }
             });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards for animation
+        document.querySelectorAll('.paper-card, .supervisor-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
         });
     </script>
 </body>
