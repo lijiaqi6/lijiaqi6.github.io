@@ -121,7 +121,7 @@
             position: relative;
             z-index: 1;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 2rem;
             align-items: start;
         }
@@ -129,16 +129,17 @@
         .hero-photo {
             display: flex;
             justify-content: center;
+            margin-bottom: 1.5rem;
         }
 
         .profile-photo {
-            width: 160px;
-            height: 190px;
-            border-radius: 12px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
             object-fit: cover;
             box-shadow: var(--shadow-lg);
             border: 3px solid white;
-            margin: 0 auto;
+            margin: 0 auto 1rem auto;
             display: block;
         }
 
@@ -741,22 +742,18 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
+                    <div class="hero-photo">
+                        <img src="personal photo.jpg" alt="Jiaqi Li" class="profile-photo">
+                    </div>
                     <h1 class="hero-name">Jiaqi Li</h1>
                     <p class="hero-title">Job Market Candidate in Economics</p>
                     <p class="hero-department">Department of Economics, University of Warwick</p>
-                </div>
-                
-                <div class="info-panel">
-                    <div class="hero-photo" style="margin-bottom: 1.5rem;">
-                        <img src="personal photo.jpg" alt="Jiaqi Li" class="profile-photo">
-                    </div>
-                    <div class="panel-header">
-                        <h2 class="panel-title">Personal Info</h2>
-                    </div>
-                    <div style="margin-bottom: 1.25rem;">
+                    
+                    <div style="margin: 1.5rem 0;">
                         <h3 style="font-size: 0.9rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem;">Research Fields</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.4;">Structural Labor, Development Economics</p>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.4;">Structural Labor, Development Economics</p>
                     </div>
+                    
                     <a href="cv.pdf" target="_blank" class="btn-primary">
                         <i class="fas fa-file-download"></i>
                         Download CV
