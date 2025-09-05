@@ -813,15 +813,22 @@
         }
 
         .btn-secondary {
-            background: var(--surface);
-            border: 1px solid var(--primary-color);
+            background: transparent;
+            border: none;
             color: var(--primary-color);
             transition: var(--transition);
+            padding: 0.4rem;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .btn-secondary:hover {
-            background: var(--primary-color);
-            color: white;
+            color: var(--secondary-color);
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -927,8 +934,8 @@
                             </div>
                         </div>
                         <div class="paper-actions-inline">
-                            <a href="li_race.pdf" target="_blank" class="btn-secondary">
-                                <i class="fas fa-file-pdf"></i> PDF
+                            <a href="li_race.pdf" target="_blank" class="btn-secondary" title="Download PDF">
+                                <i class="fas fa-file-pdf"></i>
                             </a>
                             <button class="abstract-toggle" onclick="toggleAbstract('abstract-2')">
                                 Abstract
@@ -951,8 +958,8 @@
                             <div class="paper-coauthors">with <a href="https://www.yaolang-zhong.com/" target="_blank" rel="noopener noreferrer">Yaolang Zhong</a></div>
                         </div>
                         <div class="paper-actions-inline">
-                            <a href="Father.pdf" target="_blank" class="btn-secondary">
-                                <i class="fas fa-file-pdf"></i> PDF
+                            <a href="Father.pdf" target="_blank" class="btn-secondary" title="Download PDF">
+                                <i class="fas fa-file-pdf"></i>
                             </a>
                             <button class="abstract-toggle" onclick="toggleAbstract('abstract-3')">
                                 Abstract
@@ -970,12 +977,12 @@
                         </div>
                         <div class="paper-title-row">
                             <div class="paper-title-text">
-                                Extreme Weather, Household Finance, and Child Labor: Evidence in Ethiopia
+                                On the Way to School: Drought, Enrolment and Commuting Time
                             </div>
                         </div>
                         <div class="paper-actions-inline">
-                            <a href="Drought.pdf" target="_blank" class="btn-secondary">
-                                <i class="fas fa-file-pdf"></i> PDF
+                            <a href="Drought.pdf" target="_blank" class="btn-secondary" title="Download PDF">
+                                <i class="fas fa-file-pdf"></i>
                             </a>
                             <button class="abstract-toggle" onclick="toggleAbstract('abstract-4')">
                                 Abstract
@@ -998,8 +1005,8 @@
                             <div class="paper-coauthors">with <a href="https://www.qianxue-zhang.com/" target="_blank" rel="noopener noreferrer">Zoe Zhang</a></div>
                         </div>
                         <div class="paper-actions-inline">
-                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4955252" target="_blank" class="btn-secondary">
-                                <i class="fas fa-file-pdf"></i> PDF
+                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4955252" target="_blank" class="btn-secondary" title="Download PDF">
+                                <i class="fas fa-file-pdf"></i>
                             </a>
                             <button class="abstract-toggle" onclick="toggleAbstract('abstract-1')">
                                 Abstract
@@ -1051,9 +1058,8 @@
                         </div>
                         <h4 class="paper-title">Flooding, Inflation and International Spillover</h4>
                         <div class="paper-actions">
-                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4816569" target="_blank" class="btn-secondary">
+                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4816569" target="_blank" class="btn-secondary" title="Download PDF">
                                 <i class="fas fa-file-pdf"></i>
-                                View PDF
                             </a>
                         </div>
                     </article>
