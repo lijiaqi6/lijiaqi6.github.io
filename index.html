@@ -415,12 +415,16 @@
             border-bottom: 1px solid var(--border);
         }
 
-        .paper-authors {
+        /* Inline coauthor beside paper title */
+        .paper-coauthors {
+            font-weight: 500;
+            font-size: 0.9rem;
             color: var(--text-secondary);
             font-style: italic;
-            margin-bottom: 0.5rem;
-            font-size: 0.85rem;
-        }        .supervisors-grid {
+            margin-left: 0.5rem;
+        }
+
+        .supervisors-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
@@ -830,8 +834,10 @@
                             <span class="paper-year-badge">2024</span>
                             <span class="paper-status">Working Paper</span>
                         </div>
-                        <h4 class="paper-title">Can Structural Transformation Increase Female Bargaining Power?</h4>
-                        <p class="paper-authors">with <a href="https://www.qianxue-zhang.com/" target="_blank">Zoe Zhang</a></p>
+                        <h4 class="paper-title">
+                            Can Structural Transformation Increase Female Bargaining Power?
+                            <span class="paper-coauthors">with <a href="https://www.qianxue-zhang.com/" target="_blank" rel="noopener noreferrer">Zoe Zhang</a></span>
+                        </h4>
                         <div class="paper-actions">
                             <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4955252" target="_blank" class="btn-secondary">
                                 <i class="fas fa-file-pdf"></i>
