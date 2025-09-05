@@ -747,6 +747,71 @@
             background: #4285f4;
             border-color: #4285f4;
         }
+
+        /* Paper abstract (collapsed by default) */
+        .paper-abstract {
+            display: none;
+            margin-top: 0.75rem;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            background: #fcfeff;
+            border: 1px solid var(--border);
+            padding: 0.85rem;
+            border-radius: 8px;
+            text-align: justify;
+            line-height: 1.5;
+        }
+
+        .paper-abstract.expanded {
+            display: block;
+        }
+
+        .abstract-toggle {
+            background: transparent;
+            border: 1px dashed var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.4rem 0.75rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-left: 0.5rem;
+        }
+        
+        .abstract-toggle:hover {
+            background: rgba(27,67,50,0.04);
+        }
+
+        /* Inline layout for title, coauthors and actions */
+        .paper-title-row {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .paper-title-text {
+            font-size: 1rem;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--text-primary);
+        }
+
+        .paper-coauthors {
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .paper-actions-inline {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-left: auto;
+        }
     </style>
 </head>
 <body>
@@ -845,14 +910,22 @@
                             <span class="paper-year-badge">2024</span>
                             <span class="paper-status">Working Paper</span>
                         </div>
-                        <h4 class="paper-title">
-                            Can Structural Transformation Increase Female Bargaining Power?
+                        <div class="paper-title-row">
+                            <div class="paper-title-text">
+                                Can Structural Transformation Increase Female Bargaining Power?
+                            </div>
                             <span class="paper-coauthors">with <a href="https://www.qianxue-zhang.com/" target="_blank" rel="noopener noreferrer">Zoe Zhang</a></span>
-                        
-                        <div class="paper-actions">
-                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4955252" target="_blank" class="btn-secondary">
-                                <i class="fas fa-file-pdf"></i>
-                            </a>
+                            <div class="paper-actions-inline">
+                                <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4955252" target="_blank" class="btn-secondary">
+                                    <i class="fas fa-file-pdf"></i>
+                                </a>
+                                <button class="abstract-toggle" onclick="toggleAbstract('abstract-1')">
+                                    Abstract
+                                </button>
+                            </div>
+                        </div>
+                        <div id="abstract-1" class="paper-abstract">
+                            We provide the first causal evidence that structural transformation, or service sector expansion, has led to a decline in women's intrahousehold bargaining power in 15 Sub-Saharan African countries. Using two-way fixed effects and instrumental variable estimations, we show that this decline is particularly pronounced in countries with more restrictive gender norms. To ensure robustness, we further validate our findings by leveraging sub-national statistics and within-country variations. To reconcile this fact, we add a new feature --- social stigma against females working in the service sector --- into an otherwise standard structural transformation model. We show that structural transformation can reduce the female-to-male wage ratio and prevent female empowerment if the social stigma exceeds a threshold.
                         </div>
                     </article>
                 </div>
@@ -1016,6 +1089,19 @@
                 }
             });
         });
+
+        function toggleAbstract(abstractId) {
+            const abstract = document.getElementById(abstractId);
+            const button = event.target;
+            
+            if (abstract.classList.contains('expanded')) {
+                abstract.classList.remove('expanded');
+                button.textContent = 'Abstract';
+            } else {
+                abstract.classList.add('expanded');
+                button.textContent = 'Hide Abstract';
+            }
+        }
     </script>
 </body>
 </html>
