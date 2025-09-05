@@ -122,7 +122,8 @@
             position: relative;
             z-index: 1;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            /* give the right column (info panel) a bit more space */
+            grid-template-columns: 0.9fr 1.1fr;
             gap: 3rem;
             align-items: start;
         }
@@ -1153,288 +1154,1612 @@
             background: #4285f4;
             border-color: #4285f4;
         }
-    </style>
-</head>
-<body>
-    <nav id="navbar">
-        <div class="nav-container">
-            <div style="display: flex; align-items: center; gap: 1rem;">
-                <a href="#" class="nav-logo">Jiaqi Li</a>
-                <a href="mailto:j.li.51@warwick.ac.uk" style="color: var(--text-secondary); font-size: 0.9rem; text-decoration: none; transition: var(--transition);" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'">j.li.51@warwick.ac.uk</a>
-            </div>
-            <div style="display: flex; align-items: center; gap: 2rem;">
-                <ul class="nav-links">
-                    <li><a href="#research">Research</a></li>
-                    <li><a href="#supervisors">Supervisors</a></li>
-                </ul>
-                <div class="nav-contact-buttons">
-                    <a href="https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID" target="_blank" class="nav-contact-btn scholar" title="Google Scholar">
-                        <i class="fas fa-graduation-cap"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
 
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <div class="hero-photo">
-                        <img src="personal photo.jpg" alt="Jiaqi Li" class="profile-photo">
-                    </div>
-                    <h1 class="hero-name">Jiaqi Li</h1>
-                    <p class="hero-title">Job Market Candidate in Economics</p>
-                    <p class="hero-department">Department of Economics, University of Warwick</p>
-                    
-                    <div style="margin: 1.25rem 0;">
-                        <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.4; font-weight: 400;">
-                            Research Fields: <span style="font-weight: 600; color: var(--text-primary);">Structural Labor, Development Economics</span>
-                        </p>
-                    </div>
-                    
-                    <a href="cv.pdf" target="_blank" class="btn-primary" style="margin-top: 1rem;">
-                        <i class="fas fa-file-download"></i>
-                        Curriculum Vitae
-                    </a>
-                </div>
-                
-                <div class="info-panel">
-                    <div class="panel-header">
-                        <h2 class="panel-title">PhD Thesis Summary</h2>
-                    </div>
-                    <div class="thesis-summary">
-                        <p>My dissertation examines household time allocation across three chapters.</p>
+        /* paper abstract (collapsed by default) */
+        .paper-abstract {
+            display: none;
+            margin-top: 0.75rem;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            background: #fcfeff;
+            border: 1px solid var(--border);
+            padding: 0.85rem;
+            border-radius: 8px;
+        }
 
-                        <div style="margin-top:0.75rem;">
-                            <strong>Chapter 1: Time allocation of mothers (Job Market Paper)</strong>
-                            <ul>
-                                <li>The literature puzzles over why Black women exhibit high labor-market attachment compared to white women with similar observable characteristics.</li>
-                                <li>This paper shows that high-wage Black women return to work immediately after childbirth driven by expected risks in the labor and marriage markets.</li>
-                            </ul>
-                        </div>
+        .paper-abstract.expanded {
+            display: block;
+        }
 
-                        <div style="margin-top:0.5rem;">
-                            <strong>Chapter 2: Time allocation of fathers</strong>
-                            <ul>
-                                <li>Research on child development has largely focused on maternal trade-offs between parenting and labor supply.</li>
-                                <li>This paper documents that heterogeneity in fathers’ parenting time contributes substantially to inequalities in child health and cognition.</li>
-                            </ul>
-                        </div>
+        .abstract-toggle {
+            background: transparent;
+            border: 1px dashed var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.4rem 0.75rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .abstract-toggle:hover { background: rgba(27,67,50,0.04); }
 
-                        <div style="margin-top:0.5rem;">
-                            <strong>Chapter 3: Time allocation of children</strong>
-                            <ul>
-                                <li> Existing work documents that rainfall shocks often reduce schooling and cognition, emphasizing the role of opportunity costs of schooling as child labor.</li>
-                                <li> This paper shows that road access and commuting is another important channel: droughts in Ethiopia reduce travel time, raise enrollment and time spent on after-school study, and lead to higher math scores.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-papers" id="research">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Research</h2>
-                <p class="section-subtitle">Working papers and work-in-progress</p>
-            </div>
-            
-            <!-- Working Papers -->
-            <div class="research-category">
-                <h3 class="category-title">Working Papers</h3>
-                <div class="papers-grid">
-                    <article class="paper-card">
-                        <div class="paper-meta">
-                            <span class="paper-year-badge">2024</span>
-                            <span class="paper-status">Working Paper</span>
-                        </div>
-                        <h4 class="paper-title">
-                            Can Structural Transformation Increase Female Bargaining Power?
-                            <span class="paper-coauthors">with <a href="https://www.qianxue-zhang.com/" target="_blank" rel="noopener noreferrer">Zoe Zhang</a></span>
-                        </h4>
-                        <div class="paper-actions" style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap;">
-                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4955252" target="_blank" class="btn-secondary" rel="noopener noreferrer">
-                                <i class="fas fa-file-pdf"></i>
-                                View PDF
-                            </a>
-                            <button class="abstract-toggle" aria-expanded="false" aria-controls="abstract-structural">Show abstract</button>
-                        </div>
-                        <div id="abstract-structural" class="paper-abstract" role="region" aria-hidden="true">
-                            We provide the first causal evidence that structural transformation, or service sector expansion, has led to a decline in women's intrahousehold bargaining power in 15 Sub-Saharan African countries. Using two-way fixed effects and instrumental variable estimations, we show that this decline is particularly pronounced in countries with more restrictive gender norms. To ensure robustness, we further validate our findings by leveraging sub-national statistics and within-country variations. To reconcile this fact, we add a new feature — social stigma against females working in the service sector — into an otherwise standard structural transformation model. We show that structural transformation can reduce the female-to-male wage ratio and prevent female empowerment if the social stigma exceeds a threshold.
-                        </div>
-                     </article>
-                </div>
-            </div>
-
-            <!-- Work in Progress -->
-            <div class="research-category">
-                <h3 class="category-title">Work in Progress</h3>
-                <div class="papers-grid">
-                    <article class="paper-card">
-                        <div class="paper-meta">
-                            <span class="paper-status">In Progress</span>
-                        </div>
-                        <h4 class="paper-title">The Shadow Child Penalty and Racial Inequality in Labour‑ and Marriage‑Market Risk</h4>
-                    </article>
-                    
-                    <article class="paper-card">
-                        <div class="paper-meta">
-                            <span class="paper-status">In Progress</span>
-                        </div>
-                        <h4 class="paper-title">Structural Transformation and Marriage Market</h4>
-                        <p class="paper-authors">with <a href="https://sites.google.com/view/rachelngai/home" target="_blank">Rachel Ngai</a></p>
-                    </article>
-                    
-                    <article class="paper-card">
-                        <div class="paper-meta">
-                            <span class="paper-status">In Progress</span>
-                        </div>
-                        <h4 class="paper-title">International Trade and Intrahousehold Bargaining</h4>
-                        <p class="paper-authors">with <a href="https://www.ucl.ac.uk/~uctp39a/" target="_blank">Richard Blundell</a></p>
-                    </article>
-                </div>
-            </div>
-
-            <!-- Resting Papers -->
-            <div class="research-category">
-                <h3 class="category-title">Resting Papers</h3>
-                <div class="papers-grid">
-                    <article class="paper-card">
-                        <div class="paper-meta">
-                            <span class="paper-status">Resting</span>
-                        </div>
-                        <h4 class="paper-title">Flooding, Inflation and International Spillover</h4>
-                        <div class="paper-actions">
-                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4816569" target="_blank" class="btn-secondary">
-                                <i class="fas fa-file-pdf"></i>
-                                View PDF
-                            </a>
-                        </div>
-                    </article>
-                    
-                    <article class="paper-card">
-                        <div class="paper-meta">
-                            <span class="paper-status">Resting</span>
-                        </div>
-                        <h4 class="paper-title">Extreme Weather, Household Finance, and Child Labor: Evidence in Ethiopia</h4>
-                        <div class="paper-actions">
-                            <a href="https://warwick.ac.uk/fac/soc/economics/staff/jli/_new__climate_change__child_labour_and_schooling__global_evidence.pdf" target="_blank" class="btn-secondary">
-                                <i class="fas fa-file-pdf"></i>
-                                View PDF
-                            </a>
-                        </div>
-                    </article>
-                    
-                    <article class="paper-card">
-                        <div class="paper-meta">
-                            <span class="paper-status">Resting</span>
-                        </div>
-                        <h4 class="paper-title">Fathers, Time Investment and Human Capital Inequality</h4>
-                        <p class="paper-authors">with Yaolang Zhong</p>
-                        <div class="paper-actions">
-                            <a href="fathers.pdf" target="_blank" class="btn-secondary">
-                                <i class="fas fa-file-pdf"></i>
-                                View PDF
-                            </a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-supervisors" id="supervisors">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Supervisors</h2>
-            </div>
-            
-            <div class="supervisors-grid">
-                <div class="supervisor-card">
-                    <div class="supervisor-avatar">SB</div>
-                    <h3 class="supervisor-name">Sonia Bhalotra</h3>
-                    <p class="supervisor-title">Professor of Economics</p>
-                    <a href="https://www.iza.org/person/2905/sonia-r-bhalotra" target="_blank" class="supervisor-link">
-                        View Profile <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-                
-                <div class="supervisor-card">
-                    <div class="supervisor-avatar">SC</div>
-                    <h3 class="supervisor-name">Stefano Caria</h3>
-                    <p class="supervisor-title">Professor of Economics</p>
-                    <a href="https://www.stefanocaria.com/" target="_blank" class="supervisor-link">
-                        View Profile <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-                
-                <div class="supervisor-card">
-                    <div class="supervisor-avatar">JF</div>
-                    <h3 class="supervisor-name">James Fenske</h3>
-                    <p class="supervisor-title">Professor of Economics</p>
-                    <a href="https://warwick.ac.uk/fac/soc/economics/staff/jefenske/" target="_blank" class="supervisor-link">
-                        View Profile <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p class="footer-text">Jiaqi Li - PhD Candidate in Economics</p>
-                <div class="footer-links">
-                    <a href="https://warwick.ac.uk/fac/soc/economics/staff/jli/" target="_blank" class="footer-link">
-                        University Profile
-                    </a>
-                    <a href="mailto:j.li.51@warwick.ac.uk" class="footer-link">
-                        Email
-                    </a>
-                    <a href="cv.pdf" target="_blank" class="footer-link">
-                        Download CV
-                    </a>
-                </div>
-                <div class="footer-copyright">
-                    <p>&copy; 2025 Jiaqi Li. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
             }
-        });
-+
-+        // Abstract expand/collapse handlers
-+        document.addEventListener('click', function (e) {
-+            const btn = e.target.closest('.abstract-toggle');
-+            if (!btn) return;
-+            const id = btn.getAttribute('aria-controls');
-+            const panel = document.getElementById(id);
-+            if (!panel) return;
-+            const expanded = btn.getAttribute('aria-expanded') === 'true';
-+            if (expanded) {
-+                panel.classList.remove('expanded');
-+                panel.setAttribute('aria-hidden', 'true');
-+                btn.setAttribute('aria-expanded', 'false');
-+                btn.textContent = 'Show abstract';
-+            } else {
-+                panel.classList.add('expanded');
-+                panel.setAttribute('aria-hidden', 'false');
-+                btn.setAttribute('aria-expanded', 'true');
-+                btn.textContent = 'Hide abstract';
-+            }
-+        });
-    </script>
-</body>
-</html>
+            
+            .hero-text {
+                padding-right: 0;
+            }
+            
+            .hero-photo {
+                order: -1;
+            }
+            
+            .supervisors-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            section {
+                padding: 2rem 0;
+            }
+            
+            .nav-container {
+                padding: 0 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .nav-links a {
+                font-size: 0.8rem;
+            }
+            
+            .info-panel {
+                padding: 1.25rem;
+            }
+            
+            .paper-card {
+                padding: 1.25rem;
+            }
+            
+            .supervisor-card {
+                padding: 1.25rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-contact-buttons {
+                gap: 0.5rem;
+            }
+            
+            .nav-contact-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 0.8rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            
+            .nav-container > div {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .research-category {
+            margin-bottom: 3.5rem;
+        }
+
+        .category-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+            position: relative;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .category-papers {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .category-paper {
+            background: white;
+            border-radius: 8px;
+            padding: 0.75rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .category-paper:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .category-paper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 8px 8px 0 0;
+        }
+
+        .paper-status {
+            display: inline-block;
+            padding: 0.15rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .status-working {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .status-progress {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .status-resting {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .nav-contact-buttons {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .nav-contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: 2px solid var(--primary-color);
+        }
+
+        .nav-contact-btn:hover {
+            background: var(--secondary-color);
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .nav-contact-btn.scholar {
+            background: #4285f4;
+            border-color: #4285f4;
+        }
+
+        /* paper abstract (collapsed by default) */
+        .paper-abstract {
+            display: none;
+            margin-top: 0.75rem;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            background: #fcfeff;
+            border: 1px solid var(--border);
+            padding: 0.85rem;
+            border-radius: 8px;
+        }
+
+        .paper-abstract.expanded {
+            display: block;
+        }
+
+        .abstract-toggle {
+            background: transparent;
+            border: 1px dashed var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.4rem 0.75rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .abstract-toggle:hover { background: rgba(27,67,50,0.04); }
+
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .hero-text {
+                padding-right: 0;
+            }
+            
+            .hero-photo {
+                order: -1;
+            }
+            
+            .supervisors-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            section {
+                padding: 2rem 0;
+            }
+            
+            .nav-container {
+                padding: 0 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .nav-links a {
+                font-size: 0.8rem;
+            }
+            
+            .info-panel {
+                padding: 1.25rem;
+            }
+            
+            .paper-card {
+                padding: 1.25rem;
+            }
+            
+            .supervisor-card {
+                padding: 1.25rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-contact-buttons {
+                gap: 0.5rem;
+            }
+            
+            .nav-contact-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 0.8rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            
+            .nav-container > div {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .research-category {
+            margin-bottom: 3.5rem;
+        }
+
+        .category-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+            position: relative;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .category-papers {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .category-paper {
+            background: white;
+            border-radius: 8px;
+            padding: 0.75rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .category-paper:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .category-paper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 8px 8px 0 0;
+        }
+
+        .paper-status {
+            display: inline-block;
+            padding: 0.15rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .status-working {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .status-progress {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .status-resting {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .nav-contact-buttons {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .nav-contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: 2px solid var(--primary-color);
+        }
+
+        .nav-contact-btn:hover {
+            background: var(--secondary-color);
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .nav-contact-btn.scholar {
+            background: #4285f4;
+            border-color: #4285f4;
+        }
+
+        /* paper abstract (collapsed by default) */
+        .paper-abstract {
+            display: none;
+            margin-top: 0.75rem;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            background: #fcfeff;
+            border: 1px solid var(--border);
+            padding: 0.85rem;
+            border-radius: 8px;
+        }
+
+        .paper-abstract.expanded {
+            display: block;
+        }
+
+        .abstract-toggle {
+            background: transparent;
+            border: 1px dashed var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.4rem 0.75rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .abstract-toggle:hover { background: rgba(27,67,50,0.04); }
+
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .hero-text {
+                padding-right: 0;
+            }
+            
+            .hero-photo {
+                order: -1;
+            }
+            
+            .supervisors-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            section {
+                padding: 2rem 0;
+            }
+            
+            .nav-container {
+                padding: 0 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .nav-links a {
+                font-size: 0.8rem;
+            }
+            
+            .info-panel {
+                padding: 1.25rem;
+            }
+            
+            .paper-card {
+                padding: 1.25rem;
+            }
+            
+            .supervisor-card {
+                padding: 1.25rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-contact-buttons {
+                gap: 0.5rem;
+            }
+            
+            .nav-contact-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 0.8rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            
+            .nav-container > div {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .research-category {
+            margin-bottom: 3.5rem;
+        }
+
+        .category-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+            position: relative;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .category-papers {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .category-paper {
+            background: white;
+            border-radius: 8px;
+            padding: 0.75rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .category-paper:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .category-paper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 8px 8px 0 0;
+        }
+
+        .paper-status {
+            display: inline-block;
+            padding: 0.15rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .status-working {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .status-progress {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .status-resting {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .nav-contact-buttons {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .nav-contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: 2px solid var(--primary-color);
+        }
+
+        .nav-contact-btn:hover {
+            background: var(--secondary-color);
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .nav-contact-btn.scholar {
+            background: #4285f4;
+            border-color: #4285f4;
+        }
+
+        /* paper abstract (collapsed by default) */
+        .paper-abstract {
+            display: none;
+            margin-top: 0.75rem;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            background: #fcfeff;
+            border: 1px solid var(--border);
+            padding: 0.85rem;
+            border-radius: 8px;
+        }
+
+        .paper-abstract.expanded {
+            display: block;
+        }
+
+        .abstract-toggle {
+            background: transparent;
+            border: 1px dashed var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.4rem 0.75rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .abstract-toggle:hover { background: rgba(27,67,50,0.04); }
+
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .hero-text {
+                padding-right: 0;
+            }
+            
+            .hero-photo {
+                order: -1;
+            }
+            
+            .supervisors-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            section {
+                padding: 2rem 0;
+            }
+            
+            .nav-container {
+                padding: 0 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .nav-links a {
+                font-size: 0.8rem;
+            }
+            
+            .info-panel {
+                padding: 1.25rem;
+            }
+            
+            .paper-card {
+                padding: 1.25rem;
+            }
+            
+            .supervisor-card {
+                padding: 1.25rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-contact-buttons {
+                gap: 0.5rem;
+            }
+            
+            .nav-contact-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 0.8rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            
+            .nav-container > div {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .research-category {
+            margin-bottom: 3.5rem;
+        }
+
+        .category-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+            position: relative;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .category-papers {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .category-paper {
+            background: white;
+            border-radius: 8px;
+            padding: 0.75rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .category-paper:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .category-paper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 8px 8px 0 0;
+        }
+
+        .paper-status {
+            display: inline-block;
+            padding: 0.15rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .status-working {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .status-progress {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .status-resting {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .nav-contact-buttons {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .nav-contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: 2px solid var(--primary-color);
+        }
+
+        .nav-contact-btn:hover {
+            background: var(--secondary-color);
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .nav-contact-btn.scholar {
+            background: #4285f4;
+            border-color: #4285f4;
+        }
+
+        /* paper abstract (collapsed by default) */
+        .paper-abstract {
+            display: none;
+            margin-top: 0.75rem;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            background: #fcfeff;
+            border: 1px solid var(--border);
+            padding: 0.85rem;
+            border-radius: 8px;
+        }
+
+        .paper-abstract.expanded {
+            display: block;
+        }
+
+        .abstract-toggle {
+            background: transparent;
+            border: 1px dashed var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.4rem 0.75rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .abstract-toggle:hover { background: rgba(27,67,50,0.04); }
+
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .hero-text {
+                padding-right: 0;
+            }
+            
+            .hero-photo {
+                order: -1;
+            }
+            
+            .supervisors-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            section {
+                padding: 2rem 0;
+            }
+            
+            .nav-container {
+                padding: 0 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .nav-links a {
+                font-size: 0.8rem;
+            }
+            
+            .info-panel {
+                padding: 1.25rem;
+            }
+            
+            .paper-card {
+                padding: 1.25rem;
+            }
+            
+            .supervisor-card {
+                padding: 1.25rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-contact-buttons {
+                gap: 0.5rem;
+            }
+            
+            .nav-contact-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 0.8rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            
+            .nav-container > div {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .research-category {
+            margin-bottom: 3.5rem;
+        }
+
+        .category-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+            position: relative;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .category-papers {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .category-paper {
+            background: white;
+            border-radius: 8px;
+            padding: 0.75rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .category-paper:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .category-paper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 8px 8px 0 0;
+        }
+
+        .paper-status {
+            display: inline-block;
+            padding: 0.15rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .status-working {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .status-progress {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .status-resting {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .nav-contact-buttons {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .nav-contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: 2px solid var(--primary-color);
+        }
+
+        .nav-contact-btn:hover {
+            background: var(--secondary-color);
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .nav-contact-btn.scholar {
+            background: #4285f4;
+            border-color: #4285f4;
+        }
+
+        /* paper abstract (collapsed by default) */
+        .paper-abstract {
+            display: none;
+            margin-top: 0.75rem;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            background: #fcfeff;
+            border: 1px solid var(--border);
+            padding: 0.85rem;
+            border-radius: 8px;
+        }
+
+        .paper-abstract.expanded {
+            display: block;
+        }
+
+        .abstract-toggle {
+            background: transparent;
+            border: 1px dashed var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.4rem 0.75rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .abstract-toggle:hover { background: rgba(27,67,50,0.04); }
+
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .hero-text {
+                padding-right: 0;
+            }
+            
+            .hero-photo {
+                order: -1;
+            }
+            
+            .supervisors-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            section {
+                padding: 2rem 0;
+            }
+            
+            .nav-container {
+                padding: 0 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .nav-links a {
+                font-size: 0.8rem;
+            }
+            
+            .info-panel {
+                padding: 1.25rem;
+            }
+            
+            .paper-card {
+                padding: 1.25rem;
+            }
+            
+            .supervisor-card {
+                padding: 1.25rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-contact-buttons {
+                gap: 0.5rem;
+            }
+            
+            .nav-contact-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 0.8rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            
+            .nav-container > div {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .research-category {
+            margin-bottom: 3.5rem;
+        }
+
+        .category-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+            position: relative;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .category-papers {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .category-paper {
+            background: white;
+            border-radius: 8px;
+            padding: 0.75rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .category-paper:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .category-paper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 8px 8px 0 0;
+        }
+
+        .paper-status {
+            display: inline-block;
+            padding: 0.15rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .status-working {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .status-progress {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .status-resting {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .nav-contact-buttons {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .nav-contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: 2px solid var(--primary-color);
+        }
+
+        .nav-contact-btn:hover {
+            background: var(--secondary-color);
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .nav-contact-btn.scholar {
+            background: #4285f4;
+            border-color: #4285f4;
+        }
+
+        /* paper abstract (collapsed by default) */
+        .paper-abstract {
+            display: none;
+            margin-top: 0.75rem;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            background: #fcfeff;
+            border: 1px solid var(--border);
+            padding: 0.85rem;
+            border-radius: 8px;
+        }
+
+        .paper-abstract.expanded {
+            display: block;
+        }
+
+        .abstract-toggle {
+            background: transparent;
+            border: 1px dashed var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.4rem 0.75rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .abstract-toggle:hover { background: rgba(27,67,50,0.04); }
+
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .hero-text {
+                padding-right: 0;
+            }
+            
+            .hero-photo {
+                order: -1;
+            }
+            
+            .supervisors-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            section {
+                padding: 2rem 0;
+            }
+            
+            .nav-container {
+                padding: 0 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .nav-links a {
+                font-size: 0.8rem;
+            }
+            
+            .info-panel {
+                padding: 1.25rem;
+            }
+            
+            .paper-card {
+                padding: 1.25rem;
+            }
+            
+            .supervisor-card {
+                padding: 1.25rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-contact-buttons {
+                gap: 0.5rem;
+            }
+            
+            .nav-contact-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 0.8rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            
+            .nav-container > div {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .research-category {
+            margin-bottom: 3.5rem;
+        }
+
+        .category-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+            position: relative;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .category-papers {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .category-paper {
+            background: white;
+            border-radius: 8px;
+            padding: 0.75rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .category-paper:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .category-paper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 8px 8px 0 0;
+        }
+
+        .paper-status {
+            display: inline-block;
+            padding: 0.15rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .status-working {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .status-progress {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .status-resting {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .nav-contact-buttons {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .nav-contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: 2px solid var(--primary-color);
+        }
+
+        .nav-contact-btn:hover {
+            background: var(--secondary-color);
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .nav-contact-btn.scholar {
+            background: #4285f4;
+            border-color: #4285f4;
+        }
+
+        /* paper abstract (collapsed by default) */
+        .paper-abstract {
+            display: none;
+            margin-top: 0.75rem;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            background: #fcfeff;
+            border: 1px solid var(--border);
+            padding: 0.85rem;
+            border-radius: 8px;
+        }
+
+        .paper-abstract.expanded {
+            display: block;
+        }
+
+        .abstract-toggle {
+            background: transparent;
+            border: 1px dashed var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.4rem 0.75rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .abstract-toggle:hover { background: rgba(27,67,50,0.04); }
+
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
