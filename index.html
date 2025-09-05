@@ -27,21 +27,6 @@
             --font-body: 'Inter', sans-serif;
         }
 
-        /* Dark mode variables */
-        [data-theme="dark"] {
-            --primary-color: #52734d;
-            --secondary-color: #588157;
-            --accent-color: #74a568;
-            --text-primary: #ffffff;
-            --text-secondary: #f0f0f0;
-            --text-muted: #d0d0d0;
-            --background: #0f1419;
-            --surface: #1a2332;
-            --border: #2d3748;
-            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
-            --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
-        }
-
         /* Progress Bar */
         .progress-bar {
             position: fixed;
@@ -52,32 +37,6 @@
             background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
             z-index: 9999;
             transition: width 0.2s ease;
-        }
-
-        /* Dark mode toggle */
-        .theme-toggle {
-            position: fixed;
-            top: 80px;
-            right: 20px;
-            background: var(--surface);
-            border: 2px solid var(--border);
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-            z-index: 1001;
-            color: var(--text-primary);
-            font-size: 1.2rem;
-        }
-
-        .theme-toggle:hover {
-            background: var(--primary-color);
-            color: white;
-            transform: rotate(180deg);
         }
 
         /* Search and Filter Section */
@@ -1061,11 +1020,6 @@
     <!-- Progress Bar -->
     <div class="progress-bar" id="progressBar"></div>
     
-    <!-- Dark Mode Toggle -->
-    <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
-        <i class="fas fa-moon"></i>
-    </button>
-
     <nav id="navbar">
         <div class="nav-container">
             <div style="display: flex; align-items: center; gap: 1rem;">
@@ -1414,36 +1368,6 @@
             document.getElementById('progressBar').style.width = scrolled + '%';
         }
 
-        // Dark mode toggle
-        function toggleTheme() {
-            const body = document.body;
-            const themeToggle = document.getElementById('themeToggle');
-            const currentTheme = body.getAttribute('data-theme');
-            
-            if (currentTheme === 'dark') {
-                body.setAttribute('data-theme', 'light');
-                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-                localStorage.setItem('theme', 'light');
-            } else {
-                body.setAttribute('data-theme', 'dark');
-                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-                localStorage.setItem('theme', 'dark');
-            }
-        }
-
-        // Initialize theme
-        function initTheme() {
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            const themeToggle = document.getElementById('themeToggle');
-            document.body.setAttribute('data-theme', savedTheme);
-            
-            if (savedTheme === 'dark') {
-                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-            } else {
-                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-            }
-        }
-
         // Parallax effect
         function updateParallax() {
             const scrolled = window.pageYOffset;
@@ -1615,11 +1539,7 @@
 
         // Initialize everything when DOM loads
         document.addEventListener('DOMContentLoaded', function() {
-            initTheme();
             animateOnScroll();
-            
-            // Theme toggle click
-            document.getElementById('themeToggle').addEventListener('click', toggleTheme);
             
             // Search input
             document.getElementById('paperSearch').addEventListener('input', searchPapers);
