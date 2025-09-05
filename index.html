@@ -286,15 +286,20 @@
             box-shadow: 0 8px 25px 0 rgba(26, 32, 44, 0.3);
         }
 
-        /* Lighter variant for the Curriculum Vitae button */
+        /* Less prominent / lighter variant for the Curriculum Vitae button */
         .btn-primary.btn-cv {
-            background: #2d6b54; /* lighter green */
-            border-color: #2d6b54;
+            background: #ffffff;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            box-shadow: none;
         }
 
         .btn-primary.btn-cv:hover {
-            background: #256047; /* slightly darker on hover */
-            border-color: #256047;
+            background: rgba(27, 67, 50, 0.06);
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 10px rgba(27,67,50,0.06);
         }
 
         .section-papers, .section-supervisors {
