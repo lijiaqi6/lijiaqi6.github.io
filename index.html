@@ -775,19 +775,17 @@
             cursor: pointer;
             font-weight: 600;
             font-size: 0.85rem;
-            margin-left: 0.5rem;
+            transition: var(--transition);
         }
         
         .abstract-toggle:hover {
             background: rgba(27,67,50,0.04);
+            border-color: var(--secondary-color);
+            color: var(--secondary-color);
         }
 
-        /* Inline layout for title, coauthors and actions */
+        /* Updated layout - title and coauthors on first line, buttons on second line */
         .paper-title-row {
-            display: flex;
-            align-items: baseline;
-            flex-wrap: wrap;
-            gap: 0.5rem;
             margin-bottom: 0.5rem;
         }
 
@@ -797,6 +795,7 @@
             font-weight: 600;
             line-height: 1.3;
             color: var(--text-primary);
+            margin-bottom: 0.25rem;
         }
 
         .paper-coauthors {
@@ -804,13 +803,25 @@
             font-size: 0.9rem;
             color: var(--text-secondary);
             font-style: italic;
+            margin-bottom: 0.5rem;
         }
 
         .paper-actions-inline {
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            margin-left: auto;
+        }
+
+        .btn-secondary {
+            background: var(--surface);
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: white;
         }
     </style>
 </head>
@@ -912,17 +923,87 @@
                         </div>
                         <div class="paper-title-row">
                             <div class="paper-title-text">
+                                The Shadow Child Penalty and Racial Inequality in Labour‑ and Marriage‑Market Risk
+                            </div>
+                        </div>
+                        <div class="paper-actions-inline">
+                            <a href="li_race.pdf" target="_blank" class="btn-secondary">
+                                <i class="fas fa-file-pdf"></i> PDF
+                            </a>
+                            <button class="abstract-toggle" onclick="toggleAbstract('abstract-2')">
+                                Abstract
+                            </button>
+                        </div>
+                        <div id="abstract-2" class="paper-abstract">
+                            This paper documents novel findings that Black women in the U.S. experience child penalties in a way that fundamentally differs from those faced by White women. The child penalty in employment is half as large for Black women (10%) compared to White women (30%). Educated, high-wage, married Black women return to the labor market almost immediately after childbirth. This racial difference in the labor-leisure tradeoff is driven by subjective expectations: Black households face a higher probability of layoff in the labor market, as well as higher probabilities of separation, divorce, and not getting remarried. Using a structural life-cycle model, I show that high-ability Black women use labor market attachment for self-insurance, while sacrificing their own leisure to maintain high levels of parenting time. This generates lower observed penalties in wages and labor force participation, but larger unobserved penalties via sacrificed leisure. Counterfactual simulations reveal that equalizing marriage probabilities and layoff shocks can close up to 75% of the racial gap in child penalties in employment. Welfare improves primarily through increased leisure for Black women. These results highlight the importance of uncertainty and dynamic household choices in explaining persistent racial gaps in female labor supply and child penalties.
+                        </div>
+                    </article>
+
+                    <article class="paper-card">
+                        <div class="paper-meta">
+                            <span class="paper-year-badge">2024</span>
+                            <span class="paper-status">Working Paper</span>
+                        </div>
+                        <div class="paper-title-row">
+                            <div class="paper-title-text">
+                                Fathers, Time Investment and Human Capital Inequality
+                            </div>
+                            <div class="paper-coauthors">with <a href="https://www.yaolang-zhong.com/" target="_blank" rel="noopener noreferrer">Yaolang Zhong</a></div>
+                        </div>
+                        <div class="paper-actions-inline">
+                            <a href="Father.pdf" target="_blank" class="btn-secondary">
+                                <i class="fas fa-file-pdf"></i> PDF
+                            </a>
+                            <button class="abstract-toggle" onclick="toggleAbstract('abstract-3')">
+                                Abstract
+                            </button>
+                        </div>
+                        <div id="abstract-3" class="paper-abstract">
+                            This study explores the impact of parental time investment on children's human capital development, with a particular emphasis on distinguishing between maternal and paternal contributions. Using household data from the PSID time diary and Child Development Supplement, our empirical analysis reveals significant heterogeneity and endogeneity in paternal time investment. To quantify these effects, we employ a dynamic factor model framework to estimate the production function for children's human capital, focusing on cognitive and health outcomes. To address the endogeneity of parental time investment, we implement a control function approach that leverages local labor demand shocks as instruments. Our counterfactual analysis demonstrates that equalizing paternal time investment across different stages of child development can significantly reduce inequalities in cognitive and health outcomes by adolescence. Specifically, equalizing paternal time during both early and middle childhood leads to a 22 percent reduction in cognitive disparities and a 49 percent reduction in health disparities. These findings underscore the pivotal role of paternal time investment in shaping inequalities in children's human capital development.
+                        </div>
+                    </article>
+
+                    <article class="paper-card">
+                        <div class="paper-meta">
+                            <span class="paper-year-badge">2024</span>
+                            <span class="paper-status">Working Paper</span>
+                        </div>
+                        <div class="paper-title-row">
+                            <div class="paper-title-text">
+                                Extreme Weather, Household Finance, and Child Labor: Evidence in Ethiopia
+                            </div>
+                        </div>
+                        <div class="paper-actions-inline">
+                            <a href="Drought.pdf" target="_blank" class="btn-secondary">
+                                <i class="fas fa-file-pdf"></i> PDF
+                            </a>
+                            <button class="abstract-toggle" onclick="toggleAbstract('abstract-4')">
+                                Abstract
+                            </button>
+                        </div>
+                        <div id="abstract-4" class="paper-abstract">
+                            Previous findings often find that rainfall leads to lower education outcomes in developing countries, emphasizing labor market channels: when rainfall raises agricultural wages, the opportunity cost of schooling rises and children substitute into work. This paper shows that commuting to school represents another important mechanism. Using longitudinal data from Ethiopia spanning 2002–2016, which track children's time allocation, cognition tests, and village-level precipitation, I find that moderate drought conditions significantly increase math cognition by 1.28 standard deviations, increase enrollment by 0.37 percentage points, and increase after school study time by 0.38 hours per day, while reducing travel time to school by 0.35 hours. Effects diminish at more extreme drought levels but remain positive, with larger impacts in rural areas. These results suggest that in settings with fragile school access, commuting costs play an important role in shaping the education impact of climate shocks, highlighting transportation infrastructure as a critical margin of resilience.
+                        </div>
+                    </article>
+
+                    <article class="paper-card">
+                        <div class="paper-meta">
+                            <span class="paper-year-badge">2024</span>
+                            <span class="paper-status">Working Paper</span>
+                        </div>
+                        <div class="paper-title-row">
+                            <div class="paper-title-text">
                                 Can Structural Transformation Increase Female Bargaining Power?
                             </div>
-                            <span class="paper-coauthors">with <a href="https://www.qianxue-zhang.com/" target="_blank" rel="noopener noreferrer">Zoe Zhang</a></span>
-                            <div class="paper-actions-inline">
-                                <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4955252" target="_blank" class="btn-secondary">
-                                    <i class="fas fa-file-pdf"></i>
-                                </a>
-                                <button class="abstract-toggle" onclick="toggleAbstract('abstract-1')">
-                                    Abstract
-                                </button>
-                            </div>
+                            <div class="paper-coauthors">with <a href="https://www.qianxue-zhang.com/" target="_blank" rel="noopener noreferrer">Zoe Zhang</a></div>
+                        </div>
+                        <div class="paper-actions-inline">
+                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4955252" target="_blank" class="btn-secondary">
+                                <i class="fas fa-file-pdf"></i> PDF
+                            </a>
+                            <button class="abstract-toggle" onclick="toggleAbstract('abstract-1')">
+                                Abstract
+                            </button>
                         </div>
                         <div id="abstract-1" class="paper-abstract">
                             We provide the first causal evidence that structural transformation, or service sector expansion, has led to a decline in women's intrahousehold bargaining power in 15 Sub-Saharan African countries. Using two-way fixed effects and instrumental variable estimations, we show that this decline is particularly pronounced in countries with more restrictive gender norms. To ensure robustness, we further validate our findings by leveraging sub-national statistics and within-country variations. To reconcile this fact, we add a new feature --- social stigma against females working in the service sector --- into an otherwise standard structural transformation model. We show that structural transformation can reduce the female-to-male wage ratio and prevent female empowerment if the social stigma exceeds a threshold.
@@ -971,33 +1052,6 @@
                         <h4 class="paper-title">Flooding, Inflation and International Spillover</h4>
                         <div class="paper-actions">
                             <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4816569" target="_blank" class="btn-secondary">
-                                <i class="fas fa-file-pdf"></i>
-                                View PDF
-                            </a>
-                        </div>
-                    </article>
-                    
-                    <article class="paper-card">
-                        <div class="paper-meta">
-                            <span class="paper-status">Resting</span>
-                        </div>
-                        <h4 class="paper-title">Extreme Weather, Household Finance, and Child Labor: Evidence in Ethiopia</h4>
-                        <div class="paper-actions">
-                            <a href="https://warwick.ac.uk/fac/soc/economics/staff/jli/_new__climate_change__child_labour_and_schooling__global_evidence.pdf" target="_blank" class="btn-secondary">
-                                <i class="fas fa-file-pdf"></i>
-                                View PDF
-                            </a>
-                        </div>
-                    </article>
-                    
-                    <article class="paper-card">
-                        <div class="paper-meta">
-                            <span class="paper-status">Resting</span>
-                        </div>
-                        <h4 class="paper-title">Fathers, Time Investment and Human Capital Inequality</h4>
-                        <p class="paper-authors">with Yaolang Zhong</p>
-                        <div class="paper-actions">
-                            <a href="fathers.pdf" target="_blank" class="btn-secondary">
                                 <i class="fas fa-file-pdf"></i>
                                 View PDF
                             </a>
