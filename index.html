@@ -1102,7 +1102,7 @@
 
         /* Key Findings Section */
         .key-findings {
-            display: none;
+            display: block;
             margin-top: 0.75rem;
             background: linear-gradient(135deg, #f8fffe 0%, #f0f7f5 100%);
             border: 1px solid rgba(27, 67, 50, 0.15);
@@ -1110,8 +1110,8 @@
             padding: 1.25rem;
         }
 
-        .key-findings.expanded {
-            display: block;
+        .key-findings.collapsed {
+            display: none;
         }
 
         .findings-grid {
@@ -1351,7 +1351,7 @@
                                 Abstract
                             </button>
                             <button class="abstract-toggle" onclick="toggleKeyFindings('findings-4')">
-                                Key Findings
+                                Hide Key Findings
                             </button>
                             <button class="btn-secondary" onclick="showCitation('paper3')" title="Generate Citation">
                                 BibTeX
@@ -1724,12 +1724,12 @@
             const findings = document.getElementById(findingsId);
             const button = event.target;
             
-            if (findings.classList.contains('expanded')) {
-                findings.classList.remove('expanded');
-                button.textContent = 'Key Findings';
-            } else {
-                findings.classList.add('expanded');
+            if (findings.classList.contains('collapsed')) {
+                findings.classList.remove('collapsed');
                 button.textContent = 'Hide Key Findings';
+            } else {
+                findings.classList.add('collapsed');
+                button.textContent = 'Key Findings';
             }
         }
 
