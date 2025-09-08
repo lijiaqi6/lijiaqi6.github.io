@@ -1218,10 +1218,15 @@
                     </div>
                 </div>
                 
-                <div class="info-panel">
-                    <div class="panel-header">
-                        <h2 class="panel-title">PhD Thesis Summary</h2>
-                    </div>
+                <div class="hero-contact">
+                    <div class="label">Email</div>
+                    <a href="mailto:j.li.36@warwick.ac.uk">j.li.36@warwick.ac.uk</a>
+                </div>
+                
+                <div class="hero-contact">
+                    <div class="label">Available for Interviews</div>
+                    <span style="color: var(--text-primary);">January - March 2025</span>
+                </div>
                     <div class="thesis-summary">
                         <p>My dissertation examines household time allocation across three chapters.</p>
 
@@ -1285,34 +1290,7 @@
                     <div class="panel-header">
                         <h3 class="panel-title">Thesis Summary</h3>
                     </div>
-                    <div class="thesis-summary">
-                        <p>My dissertation examines household time allocation across three chapters.</p>
 
-                        <div style="margin-top:0.75rem;">
-                            <strong>Chapter 1: Time allocation of mothers (Job Market Paper)</strong>
-                            <ul>
-                                <li>The literature puzzles over why Black women exhibit high labor-market attachment compared to white women with similar observable characteristics.</li>
-                                <li>This paper shows that high-wage Black women return to work immediately after childbirth driven by expected risks in the labor and marriage markets.</li>
-                            </ul>
-                        </div>
-
-                        <div style="margin-top:0.5rem;">
-                            <strong>Chapter 2: Time allocation of fathers</strong>
-                            <ul>
-                                <li>Research on child development has largely focused on maternal trade-offs between parenting and labor supply.</li>
-                                <li>This paper documents that heterogeneity in fathers' parenting time contributes substantially to inequalities in child health and cognition.</li>
-                            </ul>
-                        </div>
-
-                        <div style="margin-top:0.5rem;">
-                            <strong>Chapter 3: Time allocation of children</strong>
-                            <ul>
-                                <li> Existing work documents that rainfall shocks often reduce schooling and cognition, emphasizing the role of opportunity costs of schooling as child labor.</li>
-                                <li> This paper shows that road access and commuting is another important channel: droughts in Ethiopia reduce travel time, raise enrollment and time spent on after-school study, and lead to higher math scores.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
                 <div class="papers-grid">
                     <article class="paper-card" data-keywords="child penalty, racial inequality, labor, marriage, gender, structural" data-category="structural labor">
                         <div class="paper-meta">
@@ -1573,6 +1551,13 @@
                         </div>
                     </article>
 
+                </div>
+            </div>
+
+            <!-- Other Working Papers -->
+            <div class="research-category">
+                <h3 class="category-title">Other Working Papers</h3>
+                <div class="papers-grid">
                     <article class="paper-card" data-keywords="climate, flooding, inflation, trade, macroeconomic, spillover" data-category="development climate">
                         <div class="paper-meta">
                             <span class="paper-year-badge">2024</span>
@@ -1590,12 +1575,48 @@
                             <button class="abstract-toggle" onclick="toggleAbstract('abstract-flooding')">
                                 Abstract
                             </button>
+                            <button class="abstract-toggle" onclick="toggleKeyFindings('findings-flooding')">
+                                Key Findings
+                            </button>
                             <button class="btn-secondary" onclick="showCitation('paper-flooding')" title="Generate Citation">
                                 BibTeX
                             </button>
                         </div>
                         <div id="abstract-flooding" class="paper-abstract">
                             What is the macroeconomic impact of flooding? With the increasing frequency and severity of flooding events, climate change is expected to impact macroeconomic and financial stability. Combining global data on satellite images of flooding, precipitation, trade, and comprehensive panel data on economic performance, I use Jorda's local projection method with maximum precipitation serving as an external instrument for causal identification. Flood significantly increases the inflation rate by about 3 percentage points (p.p.), and raises import (share of GDP) and export by about 5 p.p., and 2 p.p. respectively, predominantly affecting developing countries. Flooding shock has significant spillover effects on inflation through trade. An additional day of flooding among all trading partners raises domestic inflation by about 5 p.p.
+                        </div>
+                        
+                        <div id="findings-flooding" class="key-findings" style="display: block;">
+                            <div class="findings-grid">
+                                <div class="finding-stat">
+                                    <div class="stat-number">+3pp</div>
+                                    <div class="stat-label">Inflation Increase</div>
+                                </div>
+                                <div class="finding-stat">
+                                    <div class="stat-number">+5pp</div>
+                                    <div class="stat-label">Import Share Rise</div>
+                                </div>
+                                <div class="finding-stat">
+                                    <div class="stat-number">Global</div>
+                                    <div class="stat-label">Satellite Data</div>
+                                </div>
+                                <div class="finding-stat">
+                                    <div class="stat-number">+5pp</div>
+                                    <div class="stat-label">Spillover Effects</div>
+                                </div>
+                            </div>
+                            
+                            <div class="findings-highlights">
+                                <div class="finding-highlight">
+                                    <strong>Inflation Channel:</strong> Flooding significantly raises domestic inflation by 3 percentage points through supply chain disruptions and increased import dependencies in affected economies.
+                                </div>
+                                <div class="finding-highlight">
+                                    <strong>Trade Spillovers:</strong> International trade networks amplify flooding impacts - each additional day of flooding among trading partners increases domestic inflation by 5 percentage points.
+                                </div>
+                                <div class="finding-highlight">
+                                    <strong>Development Impact:</strong> Developing countries face disproportionate macroeconomic instability from climate events, with both direct effects and indirect transmission through global trade relationships.
+                                </div>
+                            </div>
                         </div>
                     </article>
                 </div>
