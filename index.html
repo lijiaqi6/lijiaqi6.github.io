@@ -1099,6 +1099,71 @@
             color: var(--secondary-color);
             transform: scale(1.1);
         }
+
+        /* Key Findings Section */
+        .key-findings {
+            display: none;
+            margin-top: 0.75rem;
+            background: linear-gradient(135deg, #f8fffe 0%, #f0f7f5 100%);
+            border: 1px solid rgba(27, 67, 50, 0.15);
+            border-radius: 12px;
+            padding: 1.25rem;
+        }
+
+        .key-findings.expanded {
+            display: block;
+        }
+
+        .findings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .finding-stat {
+            background: white;
+            border-radius: 8px;
+            padding: 0.75rem;
+            text-align: center;
+            border: 1px solid rgba(27, 67, 50, 0.1);
+            box-shadow: 0 2px 8px rgba(27, 67, 50, 0.05);
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        .finding-highlight {
+            background: rgba(27, 67, 50, 0.05);
+            border-left: 3px solid var(--primary-color);
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .finding-highlight h4 {
+            margin: 0 0 0.5rem 0;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .finding-highlight p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
     </style>
 </head>
 <body>
@@ -1285,12 +1350,51 @@
                             <button class="abstract-toggle" onclick="toggleAbstract('abstract-4')">
                                 Abstract
                             </button>
+                            <button class="abstract-toggle" onclick="toggleKeyFindings('findings-4')">
+                                Key Findings
+                            </button>
                             <button class="btn-secondary" onclick="showCitation('paper3')" title="Generate Citation">
                                 BibTeX
                             </button>
                         </div>
                         <div id="abstract-4" class="paper-abstract">
                             Previous findings often find that rainfall leads to lower education outcomes in developing countries, emphasizing labor market channels: when rainfall raises agricultural wages, the opportunity cost of schooling rises and children substitute into work. This paper shows that commuting to school represents another important mechanism. Using longitudinal data from Ethiopia spanning 2002–2016, which track children's time allocation, cognition tests, and village-level precipitation, I find that moderate drought conditions significantly increase math cognition by 1.28 standard deviations, increase enrollment by 0.37 percentage points, and increase after school study time by 0.38 hours per day, while reducing travel time to school by 0.35 hours. Effects diminish at more extreme drought levels but remain positive, with larger impacts in rural areas. These results suggest that in settings with fragile school access, commuting costs play an important role in shaping the education impact of climate shocks, highlighting transportation infrastructure as a critical margin of resilience.
+                        </div>
+                        
+                        <div id="findings-4" class="key-findings">
+                            <div class="findings-grid">
+                                <div class="finding-stat">
+                                    <span class="stat-number">+1.28</span>
+                                    <span class="stat-label">Standard Deviations<br>Math Cognition Increase</span>
+                                </div>
+                                <div class="finding-stat">
+                                    <span class="stat-number">+0.37</span>
+                                    <span class="stat-label">Percentage Points<br>Enrollment Increase</span>
+                                </div>
+                                <div class="finding-stat">
+                                    <span class="stat-number">+0.38</span>
+                                    <span class="stat-label">Hours per Day<br>After-School Study Time</span>
+                                </div>
+                                <div class="finding-stat">
+                                    <span class="stat-number">-0.35</span>
+                                    <span class="stat-label">Hours Reduction<br>Travel Time to School</span>
+                                </div>
+                            </div>
+                            
+                            <div class="finding-highlight">
+                                <h4>🏫 Key Mechanism: Transportation Infrastructure</h4>
+                                <p>Drought reduces road flooding and muddy conditions, making school commutes faster and more reliable. This transportation effect is a previously understudied channel through which climate affects education.</p>
+                            </div>
+                            
+                            <div class="finding-highlight">
+                                <h4>🌍 Geographic Impact: Rural Areas Benefit Most</h4>
+                                <p>Effects are larger in rural areas where road infrastructure is more vulnerable to weather conditions. This highlights infrastructure as a key resilience factor.</p>
+                            </div>
+                            
+                            <div class="finding-highlight">
+                                <h4>📊 Data Source: Ethiopia 2002-2016</h4>
+                                <p>Longitudinal data tracking children's time allocation, cognition tests, and village-level precipitation across 14 years provides robust causal identification.</p>
+                            </div>
                         </div>
                     </article>
 
@@ -1612,6 +1716,20 @@
             } else {
                 abstract.classList.add('expanded');
                 button.textContent = 'Hide Abstract';
+            }
+        }
+
+        // Key Findings toggle function
+        function toggleKeyFindings(findingsId) {
+            const findings = document.getElementById(findingsId);
+            const button = event.target;
+            
+            if (findings.classList.contains('expanded')) {
+                findings.classList.remove('expanded');
+                button.textContent = 'Key Findings';
+            } else {
+                findings.classList.add('expanded');
+                button.textContent = 'Hide Key Findings';
             }
         }
 
