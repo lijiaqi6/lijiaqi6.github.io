@@ -726,15 +726,17 @@
         }
 
         .paper-keyword-tag {
-            background: #dc2626;
-            color: white;
-            padding: 0.2rem 0.5rem;
-            border-radius: 2px;
-            font-size: 0.7rem;
+            background: transparent;
+            color: #dc2626;
+            padding: 0;
+            border-radius: 0;
+            font-size: 0.8rem;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            text-transform: none;
+            letter-spacing: 0;
             line-height: 1;
+            margin-right: 0.75rem;
+            font-family: var(--font-body);
         }
 
         .paper-title {
@@ -1129,11 +1131,17 @@
         .paper-title-text {
             font-size: 1.25rem;
             font-family: var(--font-display);
-            font-weight: 500;
+            font-weight: 700;
             line-height: 1.35;
             color: var(--text-primary);
             display: inline;
             letter-spacing: -0.01em;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .paper-title-text:hover {
+            text-decoration: underline;
         }
 
         .paper-coauthors {
@@ -1205,6 +1213,42 @@
 
         .btn-pdf:hover i {
             color: #DC143C !important;
+        }
+
+        /* CV Button Styling */
+        .btn-cv {
+            background: var(--primary-color) !important;
+            border: 1px solid var(--primary-color) !important;
+            color: white !important;
+            transition: var(--transition);
+            padding: 0.75rem 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            gap: 0.5rem;
+            font-family: var(--font-body);
+        }
+
+        .btn-cv:hover {
+            background: #1a4a35 !important;
+            border-color: #1a4a35 !important;
+            color: white !important;
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-cv i {
+            color: white !important;
+            font-size: 1rem;
+        }
+
+        .btn-cv:hover i {
+            color: white !important;
         }
 
         /* Summary Section - Clean FT Style */
@@ -1377,6 +1421,13 @@
                     <p style="font-size: 1rem; color: var(--text-color); line-height: 1.4; font-weight: 400; margin: 1.25rem 0;">
                         Research Fields: <span style="font-weight: 600; color: var(--text-color);">Structural Labor, Development Economics</span>
                     </p>
+                    
+                    <div style="margin-top: 1.5rem;">
+                        <a href="cv.pdf" target="_blank" class="btn-cv" title="Download CV">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Curriculum Vitae</span>
+                        </a>
+                    </div>
                 </div>
                 
                 <div style="padding: 1rem; background: rgba(27, 67, 50, 0.05); border-left: 3px solid var(--primary-color); border-radius: 0 6px 6px 0;">
@@ -1486,18 +1537,17 @@
                         </div>
                         <div class="paper-title-row">
                             <div class="paper-title-text">
-                                The Shadow Child Penalty and Racial Inequality in Labour‑ and Marriage‑Market Risk
+                                <a href="li_race.pdf" target="_blank" style="color: inherit; text-decoration: none;">
+                                    The Shadow Child Penalty and Racial Inequality in Labour‑ and Marriage‑Market Risk
+                                </a>
                             </div>
                         </div>
                         <div class="paper-actions-inline">
-                            <button class="abstract-toggle" onclick="toggleKeyFindings('findings-2')">
-                                Summary
-                            </button>
-                            <a href="li_race.pdf" target="_blank" class="btn-pdf" title="Download PDF">
-                                <i class="fas fa-file-pdf"></i>
-                            </a>
                             <button class="abstract-toggle" onclick="toggleAbstract('abstract-2')">
                                 Abstract
+                            </button>
+                            <button class="abstract-toggle" onclick="toggleKeyFindings('findings-2')">
+                                Summary
                             </button>
                             <button class="btn-secondary" onclick="showCitation('paper1')" title="Generate Citation">
                                 BibTeX
@@ -1527,19 +1577,18 @@
                         </div>
                         <div class="paper-title-row">
                             <div class="paper-title-text">
-                                Fathers, Time Investment and Human Capital Inequality
-                                <span class="paper-coauthors">with <a href="https://www.yaolang-zhong.com/" target="_blank" rel="noopener noreferrer">Yaolang Zhong</a></span>
+                                <a href="Father.pdf" target="_blank" style="color: inherit; text-decoration: none;">
+                                    Fathers, Time Investment and Human Capital Inequality
+                                    <span class="paper-coauthors">with <a href="https://www.yaolang-zhong.com/" target="_blank" rel="noopener noreferrer">Yaolang Zhong</a></span>
+                                </a>
                             </div>
                         </div>
                         <div class="paper-actions-inline">
-                            <button class="abstract-toggle" onclick="toggleKeyFindings('findings-3')">
-                                Summary
-                            </button>
-                            <a href="Father.pdf" target="_blank" class="btn-pdf" title="Download PDF">
-                                <i class="fas fa-file-pdf"></i>
-                            </a>
                             <button class="abstract-toggle" onclick="toggleAbstract('abstract-3')">
                                 Abstract
+                            </button>
+                            <button class="abstract-toggle" onclick="toggleKeyFindings('findings-3')">
+                                Summary
                             </button>
                             <button class="btn-secondary" onclick="showCitation('paper2')" title="Generate Citation">
                                 BibTeX
@@ -1571,18 +1620,17 @@
                         </div>
                         <div class="paper-title-row">
                             <div class="paper-title-text">
-                                On the Way to School: Drought, Enrolment and Commuting Time
+                                <a href="Drought.pdf" target="_blank" style="color: inherit; text-decoration: none;">
+                                    On the Way to School: Drought, Enrolment and Commuting Time
+                                </a>
                             </div>
                         </div>
                         <div class="paper-actions-inline">
-                            <button class="abstract-toggle" onclick="toggleKeyFindings('findings-4')">
-                                Summary
-                            </button>
-                            <a href="Drought.pdf" target="_blank" class="btn-pdf" title="Download PDF">
-                                <i class="fas fa-file-pdf"></i>
-                            </a>
                             <button class="abstract-toggle" onclick="toggleAbstract('abstract-4')">
                                 Abstract
+                            </button>
+                            <button class="abstract-toggle" onclick="toggleKeyFindings('findings-4')">
+                                Summary
                             </button>
                             <button class="btn-secondary" onclick="showCitation('paper3')" title="Generate Citation">
                                 BibTeX
@@ -1646,14 +1694,13 @@
                         </div>
                         <div class="paper-title-row">
                             <div class="paper-title-text">
-                                Can Structural Transformation Increase Female Bargaining Power?
-                                <span class="paper-coauthors">with <a href="https://www.qianxue-zhang.com/" target="_blank" rel="noopener noreferrer">Zoe Zhang</a></span>
+                                <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4955252" target="_blank" style="color: inherit; text-decoration: none;">
+                                    Can Structural Transformation Increase Female Bargaining Power?
+                                    <span class="paper-coauthors">with <a href="https://www.qianxue-zhang.com/" target="_blank" rel="noopener noreferrer">Zoe Zhang</a></span>
+                                </a>
                             </div>
                         </div>
                         <div class="paper-actions-inline">
-                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4955252" target="_blank" class="btn-pdf" title="Download PDF">
-                                <i class="fas fa-file-pdf"></i>
-                            </a>
                             <button class="abstract-toggle" onclick="toggleAbstract('abstract-1')">
                                 Abstract
                             </button>
@@ -1673,13 +1720,12 @@
                         </div>
                         <div class="paper-title-row">
                             <div class="paper-title-text">
-                                Flooding, Inflation and International Spillover
+                                <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4816569" target="_blank" style="color: inherit; text-decoration: none;">
+                                    Flooding, Inflation and International Spillover
+                                </a>
                             </div>
                         </div>
                         <div class="paper-actions-inline">
-                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4816569" target="_blank" class="btn-pdf" title="Download PDF">
-                                <i class="fas fa-file-pdf"></i>
-                            </a>
                             <button class="abstract-toggle" onclick="toggleAbstract('abstract-flooding')">
                                 Abstract
                             </button>
