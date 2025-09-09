@@ -1168,7 +1168,7 @@
             border-color: var(--text-secondary);
         }
 
-        /* Key Findings Section - Clean FT Style */
+        /* Summary Section - Clean FT Style */
         .key-findings {
             display: block;
             margin-top: 1rem;
@@ -1246,6 +1246,36 @@
             background: #f8f9fa;
             margin: 0;
             font-weight: 500;
+        }
+
+        .figure-description {
+            padding: 0.75rem;
+            background: white;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .figure-description p {
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: var(--text-color);
+            text-align: left;
+        }
+
+        .summary-text {
+            background: rgba(27, 67, 50, 0.05);
+            border-left: 3px solid var(--primary-color);
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .summary-text p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-color);
+            font-weight: 400;
         }
 
         .finding-highlight h4 {
@@ -1418,7 +1448,7 @@
                                 Abstract
                             </button>
                             <button class="abstract-toggle" onclick="toggleKeyFindings('findings-2')">
-                                Hide Key Findings
+                                Hide Summary
                             </button>
                             <button class="btn-secondary" onclick="showCitation('paper1')" title="Generate Citation">
                                 BibTeX
@@ -1430,7 +1460,7 @@
                         
                         <div id="findings-2" class="key-findings">
                             <div class="findings-figures">
-                                <h4>📈 Key Figures & Results</h4>
+                                <h4>📈 Summary Figures & Results</h4>
                                 <div class="figures-grid">
                                     <!-- Figures will be added here -->
                                 </div>
@@ -1461,7 +1491,7 @@
                                 Abstract
                             </button>
                             <button class="abstract-toggle" onclick="toggleKeyFindings('findings-3')">
-                                Hide Key Findings
+                                Hide Summary
                             </button>
                             <button class="btn-secondary" onclick="showCitation('paper2')" title="Generate Citation">
                                 BibTeX
@@ -1473,7 +1503,7 @@
                         
                         <div id="findings-3" class="key-findings">
                             <div class="findings-figures">
-                                <h4>📈 Key Figures & Results</h4>
+                                <h4>📈 Summary Figures & Results</h4>
                                 <div class="figures-grid">
                                     <!-- Figures will be added here -->
                                 </div>
@@ -1503,7 +1533,7 @@
                                 Abstract
                             </button>
                             <button class="abstract-toggle" onclick="toggleKeyFindings('findings-4')">
-                                Hide Key Findings
+                                Hide Summary
                             </button>
                             <button class="btn-secondary" onclick="showCitation('paper3')" title="Generate Citation">
                                 BibTeX
@@ -1514,24 +1544,39 @@
                         </div>
                         
                         <div id="findings-4" class="key-findings">
+                            <div class="summary-text">
+                                <p>Existing work documents that rainfall shocks often reduce schooling and cognition, emphasizing the role of opportunity costs of schooling as child labor. This paper shows that road access and commuting is another important channel: droughts in Ethiopia reduce travel time, raise enrollment and time spent on after-school study, and lead to higher math scores.</p>
+                            </div>
                             <div class="findings-figures">
-                                <h4>📈 Key Figures & Results</h4>
+                                <h4>📈 Summary Figures & Results</h4>
                                 <div class="figures-grid">
                                     <div class="figure-item">
                                         <img src="rainfall_eventstudy_joint.png" alt="Event Study: Joint Analysis of Rainfall Effects" style="width: 100%; height: auto; display: block;">
                                         <p class="figure-caption">Event Study: Joint Analysis of Rainfall Effects</p>
+                                        <div class="figure-description">
+                                            <p>This event study reveals the dynamic relationship between rainfall shocks and educational outcomes over time. The figure demonstrates how moderate drought conditions create a sustained positive impact on school enrollment and cognitive performance, challenging the conventional view that reduced rainfall uniformly harms education. The effects peak around moderate drought levels and persist across multiple years, highlighting the importance of the transportation mechanism.</p>
+                                        </div>
                                     </div>
                                     <div class="figure-item">
                                         <img src="nonlinear_enrol_twoway_comparison.png" alt="Nonlinear Effects: Enrollment Response" style="width: 100%; height: auto; display: block;">
                                         <p class="figure-caption">Nonlinear Effects: Enrollment Response</p>
+                                        <div class="figure-description">
+                                            <p>This figure illustrates the nonlinear relationship between rainfall levels and school enrollment rates. It shows how moderate drought conditions significantly increase enrollment by 0.37 percentage points, as improved road conditions make school more accessible. The effects are strongest in the middle range of drought severity, with diminishing returns at extreme levels, supporting the transportation infrastructure hypothesis.</p>
+                                        </div>
                                     </div>
                                     <div class="figure-item">
                                         <img src="nonlinear_timesch_twoway_comparison.png" alt="Nonlinear Effects: School Travel Time" style="width: 100%; height: auto; display: block;">
                                         <p class="figure-caption">Nonlinear Effects: School Travel Time</p>
+                                        <div class="figure-description">
+                                            <p>This key figure provides direct evidence for the transportation mechanism. It demonstrates how moderate drought reduces school commuting time by 0.35 hours per day, as drier conditions improve road quality and reduce flooding on school routes. This time savings enables children to attend school more regularly and have more time for study, directly supporting the paper's core theoretical framework.</p>
+                                        </div>
                                     </div>
                                     <div class="figure-item">
                                         <img src="nonlinear_mathscore_schoolrain_twoway_comparison.png" alt="Nonlinear Effects: Math Score Performance" style="width: 100%; height: auto; display: block;">
                                         <p class="figure-caption">Nonlinear Effects: Math Score Performance</p>
+                                        <div class="figure-description">
+                                            <p>This figure shows the remarkable impact of moderate drought on cognitive development, with math scores improving by 1.28 standard deviations. The nonlinear pattern mirrors the enrollment and travel time results, confirming that improved school accessibility during moderate drought translates into substantial learning gains. This finding challenges traditional assumptions about climate impacts on human capital formation.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1878,17 +1923,17 @@
             }
         }
 
-        // Key Findings toggle function
+        // Summary toggle function
         function toggleKeyFindings(findingsId) {
             const findings = document.getElementById(findingsId);
             const button = event.target;
             
             if (findings.classList.contains('collapsed')) {
                 findings.classList.remove('collapsed');
-                button.textContent = 'Hide Key Findings';
+                button.textContent = 'Hide Summary';
             } else {
                 findings.classList.add('collapsed');
-                button.textContent = 'Key Findings';
+                button.textContent = 'Summary';
             }
         }
 
