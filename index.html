@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jiaqi Li's Personal Website</title>
-    <!-- Advanced Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Sharp Typography Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Source+Sans+Pro:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -24,9 +24,9 @@
             --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.1);
             --transition: all 0.2s ease;
-            --font-display: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-            --font-body: 'Inter', 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', system-ui, sans-serif;
-            --font-heading: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            --font-display: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+            --font-body: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
+            --font-heading: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
         }
 
         /* Back to Top Button */
@@ -326,12 +326,14 @@
         body {
             font-family: var(--font-body);
             font-size: 16px;
-            line-height: 1.7;
+            line-height: 1.6;
             color: var(--text-primary);
             background: var(--background);
             font-weight: 400;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            font-feature-settings: "kern" 1, "liga" 1;
             overflow-x: hidden;
         }
 
