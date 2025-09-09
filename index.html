@@ -277,7 +277,7 @@
             left: 0;
             width: 120%;
             height: 120%;
-            background: linear-gradient(135deg, #1a3509 0%, #0f2505 100%);
+            background: var(--background);
             transform: translateZ(0);
         }
 
@@ -366,8 +366,8 @@
             min-height: 75vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, #1a3509 0%, #0f2505 100%);
-            color: white;
+            background: var(--background);
+            color: var(--text-primary);
             position: relative;
             overflow: hidden;
             padding-top: 80px;
@@ -409,20 +409,20 @@
             font-weight: 600;
             line-height: 1.1;
             margin-bottom: 0.5rem;
-            color: white;
+            color: var(--text-primary);
             letter-spacing: -0.05em;
         }
 
         .hero-title {
             font-size: clamp(1rem, 2vw, 1.1rem);
-            color: #f0f0f0;
+            color: var(--text-secondary);
             margin-bottom: 0.25rem;
             font-weight: 500;
         }
 
         .hero-department {
             font-size: 0.95rem;
-            color: #e0e0e0;
+            color: var(--text-secondary);
             margin-bottom: 1rem;
             font-weight: 400;
         }
@@ -1204,10 +1204,10 @@
                     <p class="hero-department">Department of Economics, University of Warwick</p>
                     
                     <div style="margin: 1.25rem 0;">
-                        <p style="font-size: 1rem; color: white; line-height: 1.4; font-weight: 400;">
-                            Research Fields: <span style="font-weight: 600; color: white;">Structural Labor, Development Economics</span>
+                        <p style="font-size: 1rem; color: var(--text-primary); line-height: 1.4; font-weight: 400;">
+                            Research Fields: <span style="font-weight: 600; color: var(--text-primary);">Structural Labor, Development Economics</span>
                         </p>
-                        <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); line-height: 1.4; font-style: italic; margin-top: 0.5rem;">
+                        <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.4; font-style: italic; margin-top: 0.5rem;">
                             I study household time allocation to understand inequality across contexts and identify ways to reduce it.
                         </p>
                     </div>
@@ -1256,8 +1256,8 @@
                 <p class="section-subtitle">Working papers and work-in-progress</p>
             </div>
 
-            <!-- Search and Filter Controls -->
-            <div class="research-controls">
+            <!-- Search and Filter Controls - Hidden for clean FT style -->
+            <div class="research-controls" style="display: none;">
                 <div class="search-container">
                     <i class="fas fa-search search-icon"></i>
                     <input type="text" class="search-input" id="paperSearch" placeholder="Search my papers by title, keywords, or content...">
