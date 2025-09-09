@@ -1705,9 +1705,9 @@
                     </article>
                 </div>
             </div>
-                </div>
-            </div>
-        </div>
+                </div> <!-- End research-content -->
+            </div> <!-- End research-layout -->
+        </div> <!-- End container -->
     </section>
 
     <section class="section-supervisors" id="supervisors">
@@ -1956,11 +1956,11 @@
             const findings = document.getElementById(findingsId);
             const button = event.target;
             
-            if (findings.classList.contains('collapsed')) {
-                findings.classList.remove('collapsed');
+            if (findings.style.display === 'none') {
+                findings.style.display = 'block';
                 button.textContent = 'Hide Summary';
             } else {
-                findings.classList.add('collapsed');
+                findings.style.display = 'none';
                 button.textContent = 'Summary';
             }
         }
