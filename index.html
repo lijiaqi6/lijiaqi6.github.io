@@ -118,26 +118,55 @@
             transition: width 0.2s ease;
         }
 
-        /* Search and Filter Section */
-        .research-controls {
+        /* Sidebar Layout */
+        .research-layout {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .research-sidebar {
             background: var(--surface);
-            padding: 2rem;
-            border-radius: 12px;
-            margin-bottom: 3rem;
-            border: 1px solid var(--border);
+            border: 1px solid var(--light-border);
+            border-radius: 4px;
+            padding: 1.5rem;
+            position: sticky;
+            top: 100px;
+        }
+
+        .research-content {
+            min-height: 100px;
+        }
+
+        .sidebar-section {
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .sidebar-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .search-container {
             position: relative;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0;
         }
 
         .search-input {
             width: 100%;
-            padding: 1rem 1rem 1rem 3rem;
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            font-size: 1rem;
+            padding: 0.5rem 0.75rem 0.5rem 2rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-size: 0.85rem;
             background: var(--background);
             color: var(--text-primary);
             transition: var(--transition);
@@ -151,11 +180,11 @@
 
         .search-icon {
             position: absolute;
-            left: 1rem;
+            left: 0.5rem;
             top: 50%;
             transform: translateY(-50%);
             color: var(--text-muted);
-            font-size: 1rem;
+            font-size: 0.8rem;
         }
 
         .filter-tags {
@@ -164,16 +193,23 @@
             gap: 0.75rem;
         }
 
+        .filter-tags-vertical {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
         .filter-tag {
-            padding: 0.5rem 1rem;
+            padding: 0.4rem 0.8rem;
             background: var(--background);
-            border: 2px solid var(--border);
-            border-radius: 25px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
             cursor: pointer;
             transition: var(--transition);
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 500;
             color: var(--text-secondary);
+            text-align: left;
         }
 
         .filter-tag:hover, .filter-tag.active {
@@ -832,6 +868,21 @@
         }
 
         @media (max-width: 768px) {
+            .research-layout {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .research-sidebar {
+                position: relative;
+                top: auto;
+                order: 2;
+            }
+
+            .research-content {
+                order: 1;
+            }
+
             .container {
                 padding: 0 1rem;
             }
@@ -1256,20 +1307,32 @@
                 <p class="section-subtitle">Working papers and work-in-progress</p>
             </div>
 
-            <!-- Search and Filter Controls - Hidden for clean FT style -->
-            <div class="research-controls" style="display: none;">
-                <div class="search-container">
-                    <i class="fas fa-search search-icon"></i>
-                    <input type="text" class="search-input" id="paperSearch" placeholder="Search my papers by title, keywords, or content...">
+            <!-- Main Research Layout with Sidebar -->
+            <div class="research-layout">
+                <!-- Sidebar with Search and Filters -->
+                <div class="research-sidebar">
+                    <div class="sidebar-section">
+                        <h4 class="sidebar-title">Search Papers</h4>
+                        <div class="search-container">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" class="search-input" id="paperSearch" placeholder="Search papers...">
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h4 class="sidebar-title">Filter by Field</h4>
+                        <div class="filter-tags-vertical">
+                            <button class="filter-tag active" data-filter="all">All Papers</button>
+                            <button class="filter-tag" data-filter="structural labor">Structural Labor</button>
+                            <button class="filter-tag" data-filter="development">Development Economics</button>
+                            <button class="filter-tag" data-filter="children">Child Development</button>
+                            <button class="filter-tag" data-filter="climate">Climate Economics</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="filter-tags">
-                    <button class="filter-tag active" data-filter="all">All Papers</button>
-                    <button class="filter-tag" data-filter="structural labor">Structural Labor</button>
-                    <button class="filter-tag" data-filter="development">Development Economics</button>
-                    <button class="filter-tag" data-filter="children">Child Development</button>
-                    <button class="filter-tag" data-filter="climate">Climate Economics</button>
-                </div>
-            </div>
+                
+                <!-- Main Content Area -->
+                <div class="research-content">
             
             <!-- PhD Thesis -->
             <div class="research-category">
@@ -1632,6 +1695,8 @@
                         <h4 class="paper-title">International Trade and Intrahousehold Bargaining</h4>
                         <p class="paper-authors">with <a href="https://www.ucl.ac.uk/~uctp39a/" target="_blank">Richard Blundell</a></p>
                     </article>
+                </div>
+            </div>
                 </div>
             </div>
         </div>
