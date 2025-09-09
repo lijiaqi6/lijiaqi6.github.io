@@ -1215,40 +1215,39 @@
             color: #DC143C !important;
         }
 
-        /* CV Button Styling */
+        /* CV Button Styling - Simple Link Style */
         .btn-cv {
-            background: var(--primary-color) !important;
-            border: 1px solid var(--primary-color) !important;
-            color: white !important;
+            background: transparent !important;
+            border: none !important;
+            color: var(--primary-color) !important;
             transition: var(--transition);
-            padding: 0.75rem 1.5rem;
-            font-size: 0.9rem;
+            padding: 0;
+            font-size: 0.95rem;
             font-weight: 600;
             cursor: pointer;
-            text-decoration: none;
+            text-decoration: underline;
             display: inline-flex;
             align-items: center;
-            justify-content: center;
-            border-radius: 6px;
-            gap: 0.5rem;
+            gap: 0.4rem;
             font-family: var(--font-body);
         }
 
         .btn-cv:hover {
-            background: #1a4a35 !important;
-            border-color: #1a4a35 !important;
-            color: white !important;
-            transform: translateY(-1px);
-            box-shadow: var(--shadow-lg);
+            background: transparent !important;
+            border: none !important;
+            color: var(--secondary-color) !important;
+            transform: none;
+            box-shadow: none;
+            text-decoration: underline;
         }
 
         .btn-cv i {
-            color: white !important;
-            font-size: 1rem;
+            color: var(--primary-color) !important;
+            font-size: 0.9rem;
         }
 
         .btn-cv:hover i {
-            color: white !important;
+            color: var(--secondary-color) !important;
         }
 
         /* Summary Section - Clean FT Style */
