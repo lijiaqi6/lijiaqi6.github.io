@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jiaqi Li's Personal Website</title>
     <!-- Sharp Typography Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Source+Sans+Pro:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -24,9 +24,9 @@
             --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.1);
             --transition: all 0.2s ease;
-            --font-display: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
-            --font-body: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
-            --font-heading: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
+            --font-display: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+            --font-body: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+            --font-heading: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
         }
 
         /* Back to Top Button */
@@ -326,15 +326,16 @@
         body {
             font-family: var(--font-body);
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 1.65;
             color: var(--text-primary);
             background: var(--background);
             font-weight: 400;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeLegibility;
-            font-feature-settings: "kern" 1, "liga" 1;
+            font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
             overflow-x: hidden;
+            font-optical-sizing: auto;
         }
 
         .container {
@@ -442,13 +443,14 @@
         }
 
         .hero-name {
-            font-size: clamp(2.2rem, 4vw, 2.8rem);
+            font-size: clamp(2.4rem, 4vw, 3.2rem);
             font-family: var(--font-display);
-            font-weight: 600;
+            font-weight: 500;
             line-height: 1.1;
             margin-bottom: 0.5rem;
             color: var(--text-primary);
-            letter-spacing: -0.05em;
+            letter-spacing: -0.02em;
+            font-feature-settings: "kern" 1, "liga" 1, "swsh" 1;
         }
 
         .hero-title {
@@ -647,14 +649,15 @@
         }
 
         .category-title {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             font-family: var(--font-display);
-            font-weight: 600;
-            line-height: 1.3;
+            font-weight: 500;
+            line-height: 1.2;
             color: var(--text-primary);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             padding-bottom: 0.75rem;
             border-bottom: 1px solid var(--border);
+            letter-spacing: -0.01em;
         }
 
         .paper-authors {
@@ -1124,12 +1127,13 @@
         }
 
         .paper-title-text {
-            font-size: 1.2rem;
-            font-family: var(--font-heading);
-            font-weight: 600;
-            line-height: 1.4;
+            font-size: 1.25rem;
+            font-family: var(--font-display);
+            font-weight: 500;
+            line-height: 1.35;
             color: var(--text-primary);
             display: inline;
+            letter-spacing: -0.01em;
         }
 
         .paper-coauthors {
@@ -1376,7 +1380,7 @@
                 </div>
                 
                 <div style="padding: 1rem; background: rgba(27, 67, 50, 0.05); border-left: 3px solid var(--primary-color); border-radius: 0 6px 6px 0;">
-                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--text-color); margin: 0 0 0.75rem 0; font-weight: 600;">PhD Thesis Summary</h3>
+                    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--text-color); margin: 0 0 0.75rem 0; font-weight: 600;">PhD Thesis Summary</h3>
                     <p style="font-size: 0.9rem; color: var(--text-color); line-height: 1.5; margin: 0 0 0.75rem 0;">
                         My dissertation examines household time allocation across three chapters.
                     </p>
