@@ -1168,33 +1168,46 @@
             border-color: var(--text-secondary);
         }
 
-        /* Adobe Acrobat PDF Button Styling */
+        /* Adobe Acrobat PDF Button Styling - Subtle Label Style */
         .btn-pdf {
-            background: #DC143C !important;  /* Adobe red */
+            background: transparent !important;
             border: 1px solid #DC143C !important;
-            color: white !important;
+            color: #DC143C !important;
             transition: var(--transition);
             padding: 0.4rem 0.8rem;
             font-size: 0.85rem;
+            font-weight: 600;
             cursor: pointer;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(220, 20, 60, 0.2);
+            gap: 0.3rem;
         }
 
         .btn-pdf:hover {
-            background: #B91C3C !important;  /* Darker red on hover */
-            border-color: #B91C3C !important;
+            background: #DC143C !important;
+            border-color: #DC143C !important;
             color: white !important;
-            box-shadow: 0 4px 8px rgba(220, 20, 60, 0.3);
-            transform: translateY(-1px);
+            transform: none;
+            box-shadow: none;
         }
 
         .btn-pdf i {
+            color: #DC143C !important;
+            font-size: 0.9rem;
+        }
+
+        .btn-pdf:hover i {
             color: white !important;
+        }
+
+        .btn-pdf::after {
+            content: "PDF";
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
 
         /* Summary Section - Clean FT Style */
