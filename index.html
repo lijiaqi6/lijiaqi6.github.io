@@ -714,6 +714,26 @@
             font-weight: 500;
         }
 
+        /* Vanity Fair Style Keywords */
+        .paper-keywords {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .paper-keyword-tag {
+            background: #dc2626;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 2px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1;
+        }
+
         .paper-title {
             font-size: 1rem;
             font-family: var(--font-heading);
@@ -1199,6 +1219,35 @@
             border-radius: 0 6px 6px 0;
         }
 
+        .findings-figures {
+            margin-top: 1rem;
+        }
+
+        .figures-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 0.75rem;
+        }
+
+        .figure-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(27, 67, 50, 0.1);
+            box-shadow: 0 2px 8px rgba(27, 67, 50, 0.05);
+        }
+
+        .figure-caption {
+            padding: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: center;
+            background: #f8f9fa;
+            margin: 0;
+            font-weight: 500;
+        }
+
         .finding-highlight h4 {
             margin: 0 0 0.5rem 0;
             color: var(--primary-color);
@@ -1352,6 +1401,10 @@
                             <span class="paper-year-badge">2025 Oct</span>
                             <span class="paper-status">Job Market Paper</span>
                         </div>
+                        <div class="paper-keywords">
+                            <span class="paper-keyword-tag">Structural Labor</span>
+                            <span class="paper-keyword-tag">Gender</span>
+                        </div>
                         <div class="paper-title-row">
                             <div class="paper-title-text">
                                 The Shadow Child Penalty and Racial Inequality in Labour‑ and Marriage‑Market Risk
@@ -1416,6 +1469,10 @@
                         <div class="paper-meta">
                             <span class="paper-year-badge">2025 Oct</span>
                             <span class="paper-status">Second Chapter</span>
+                        </div>
+                        <div class="paper-keywords">
+                            <span class="paper-keyword-tag">Child Development</span>
+                            <span class="paper-keyword-tag">Structural Labor</span>
                         </div>
                         <div class="paper-title-row">
                             <div class="paper-title-text">
@@ -1483,6 +1540,10 @@
                             <span class="paper-year-badge">2025 Oct</span>
                             <span class="paper-status">Third Chapter</span>
                         </div>
+                        <div class="paper-keywords">
+                            <span class="paper-keyword-tag">Development Economics</span>
+                            <span class="paper-keyword-tag">Climate Economics</span>
+                        </div>
                         <div class="paper-title-row">
                             <div class="paper-title-text">
                                 On the Way to School: Drought, Enrolment and Commuting Time
@@ -1540,6 +1601,28 @@
                                 <h4>📊 Data Source: Ethiopia 2002-2016</h4>
                                 <p>Longitudinal data tracking children's time allocation, cognition tests, and village-level precipitation across 14 years provides robust causal identification.</p>
                             </div>
+                            
+                            <div class="findings-figures">
+                                <h4>📈 Key Figures & Results</h4>
+                                <div class="figures-grid">
+                                    <div class="figure-item">
+                                        <iframe src="rainfall_eventstudy_joint.pdf" width="100%" height="400px" style="border: 1px solid #ddd; border-radius: 4px;"></iframe>
+                                        <p class="figure-caption">Event Study: Joint Analysis of Rainfall Effects</p>
+                                    </div>
+                                    <div class="figure-item">
+                                        <iframe src="rainfall_nonlinear_enrol_twoway_comparison.pdf" width="100%" height="400px" style="border: 1px solid #ddd; border-radius: 4px;"></iframe>
+                                        <p class="figure-caption">Nonlinear Effects: Enrollment Response</p>
+                                    </div>
+                                    <div class="figure-item">
+                                        <iframe src="rainfall_nonlinear_timesch_twoway_comparison.pdf" width="100%" height="400px" style="border: 1px solid #ddd; border-radius: 4px;"></iframe>
+                                        <p class="figure-caption">Nonlinear Effects: School Travel Time</p>
+                                    </div>
+                                    <div class="figure-item">
+                                        <iframe src="rainfall_nonlinear_mathscore_schoolrain_twoway_comparison.pdf" width="100%" height="400px" style="border: 1px solid #ddd; border-radius: 4px;"></iframe>
+                                        <p class="figure-caption">Nonlinear Effects: Math Score Performance</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </article>
 
@@ -1547,6 +1630,10 @@
                         <div class="paper-meta">
                             <span class="paper-year-badge">2025 Oct</span>
                             <span class="paper-status">Working Paper</span>
+                        </div>
+                        <div class="paper-keywords">
+                            <span class="paper-keyword-tag">Development Economics</span>
+                            <span class="paper-keyword-tag">Gender</span>
                         </div>
                         <div class="paper-title-row">
                             <div class="paper-title-text">
@@ -1617,6 +1704,10 @@
                         <div class="paper-meta">
                             <span class="paper-year-badge">2024</span>
                             <span class="paper-status">Working Paper</span>
+                        </div>
+                        <div class="paper-keywords">
+                            <span class="paper-keyword-tag">Climate Economics</span>
+                            <span class="paper-keyword-tag">Macroeconomics</span>
                         </div>
                         <div class="paper-title-row">
                             <div class="paper-title-text">
