@@ -678,11 +678,12 @@
         }
 
         /* Inline coauthor styling for paper titles */
-        .paper-title-text .paper-authors {
+        .paper-title-row .paper-authors {
             font-size: 0.85rem;
             font-weight: 400;
             margin-bottom: 0;
             margin-left: 0.5rem;
+            display: inline;
         }
 
         .paper-card {
@@ -1178,6 +1179,9 @@
         /* Updated layout - title and coauthors on same line, buttons on second line */
         .paper-title-row {
             margin-bottom: 0.5rem;
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
         }
 
         .paper-title-text {
@@ -1469,7 +1473,7 @@
                 line-height: 1.3 !important;
             }
             
-            .paper-title-text .paper-authors {
+            .paper-title-row .paper-authors {
                 font-size: 0.75rem !important;
                 display: block !important;
                 margin-left: 0 !important;
@@ -1718,8 +1722,8 @@
                                 <a href="Father.pdf" target="_blank" style="color: inherit; text-decoration: none;">
                                     Fathers, Time Investment and Human Capital Inequality
                                 </a>
-                                <span class="paper-authors">with <a href="https://www.yaolang-zhong.com/" target="_blank" rel="noopener noreferrer">Yaolang Zhong</a></span>
                             </div>
+                            <span class="paper-authors">with <a href="https://www.yaolang-zhong.com/" target="_blank" rel="noopener noreferrer">Yaolang Zhong</a></span>
                         </div>
                         <div class="paper-actions-inline">
                             <button class="abstract-toggle" onclick="toggleAbstract('abstract-3')">
@@ -1835,8 +1839,8 @@
                                 <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4955252" target="_blank" style="color: inherit; text-decoration: none;">
                                     Can Structural Transformation Increase Female Bargaining Power?
                                 </a>
-                                <span class="paper-authors">with <a href="https://www.qianxue-zhang.com/" target="_blank" rel="noopener noreferrer">Zoe Zhang</a></span>
                             </div>
+                            <span class="paper-authors">with <a href="https://www.qianxue-zhang.com/" target="_blank" rel="noopener noreferrer">Zoe Zhang</a></span>
                         </div>
                         <div class="paper-actions-inline">
                             <button class="abstract-toggle" onclick="toggleAbstract('abstract-1')">
