@@ -1168,6 +1168,35 @@
             border-color: var(--text-secondary);
         }
 
+        /* Adobe Acrobat PDF Button Styling */
+        .btn-pdf {
+            background: #DC143C !important;  /* Adobe red */
+            border: 1px solid #DC143C !important;
+            color: white !important;
+            transition: var(--transition);
+            padding: 0.4rem 0.8rem;
+            font-size: 0.85rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(220, 20, 60, 0.2);
+        }
+
+        .btn-pdf:hover {
+            background: #B91C3C !important;  /* Darker red on hover */
+            border-color: #B91C3C !important;
+            color: white !important;
+            box-shadow: 0 4px 8px rgba(220, 20, 60, 0.3);
+            transform: translateY(-1px);
+        }
+
+        .btn-pdf i {
+            color: white !important;
+        }
+
         /* Summary Section - Clean FT Style */
         .key-findings {
             display: block;
@@ -1345,7 +1374,7 @@
                     </div>
                 </div>
                 
-                <div class="info-panel">
+                <div class="info-panel" style="display: none;">
                     <div class="panel-header">
                         <h2 class="panel-title">PhD Thesis Summary</h2>
                     </div>
@@ -1441,7 +1470,7 @@
                             </div>
                         </div>
                         <div class="paper-actions-inline">
-                            <a href="li_race.pdf" target="_blank" class="btn-secondary" title="Download PDF">
+                            <a href="li_race.pdf" target="_blank" class="btn-pdf" title="Download PDF">
                                 <i class="fas fa-file-pdf"></i>
                             </a>
                             <button class="abstract-toggle" onclick="toggleAbstract('abstract-2')">
@@ -1459,6 +1488,9 @@
                         </div>
                         
                         <div id="findings-2" class="key-findings">
+                            <div class="summary-text">
+                                <p>The literature puzzles over why Black women exhibit high labor-market attachment compared to white women with similar observable characteristics. This paper shows that high-wage Black women return to work immediately after childbirth driven by expected risks in the labor and marriage markets.</p>
+                            </div>
                             <div class="findings-figures">
                                 <h4>📈 Summary Figures & Results</h4>
                                 <div class="figures-grid">
@@ -1484,7 +1516,7 @@
                             </div>
                         </div>
                         <div class="paper-actions-inline">
-                            <a href="Father.pdf" target="_blank" class="btn-secondary" title="Download PDF">
+                            <a href="Father.pdf" target="_blank" class="btn-pdf" title="Download PDF">
                                 <i class="fas fa-file-pdf"></i>
                             </a>
                             <button class="abstract-toggle" onclick="toggleAbstract('abstract-3')">
@@ -1502,6 +1534,9 @@
                         </div>
                         
                         <div id="findings-3" class="key-findings">
+                            <div class="summary-text">
+                                <p>Research on child development has largely focused on maternal trade-offs between parenting and labor supply. This paper documents that heterogeneity in fathers' parenting time contributes substantially to inequalities in child health and cognition.</p>
+                            </div>
                             <div class="findings-figures">
                                 <h4>📈 Summary Figures & Results</h4>
                                 <div class="figures-grid">
@@ -1526,7 +1561,7 @@
                             </div>
                         </div>
                         <div class="paper-actions-inline">
-                            <a href="Drought.pdf" target="_blank" class="btn-secondary" title="Download PDF">
+                            <a href="Drought.pdf" target="_blank" class="btn-pdf" title="Download PDF">
                                 <i class="fas fa-file-pdf"></i>
                             </a>
                             <button class="abstract-toggle" onclick="toggleAbstract('abstract-4')">
@@ -1583,6 +1618,13 @@
                         </div>
                     </article>
 
+                </div>
+            </div>
+
+            <!-- Other Working Papers -->
+            <div class="research-category">
+                <h3 class="category-title">Other Working Papers</h3>
+                <div class="papers-grid">
                     <article class="paper-card" data-keywords="structural transformation, female bargaining power, gender, africa, service sector" data-category="development structural labor">
                         <div class="paper-meta">
                             <span class="paper-year-badge">2025 Oct</span>
@@ -1599,7 +1641,7 @@
                             </div>
                         </div>
                         <div class="paper-actions-inline">
-                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4955252" target="_blank" class="btn-secondary" title="Download PDF">
+                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4955252" target="_blank" class="btn-pdf" title="Download PDF">
                                 <i class="fas fa-file-pdf"></i>
                             </a>
                             <button class="abstract-toggle" onclick="toggleAbstract('abstract-1')">
@@ -1612,16 +1654,8 @@
                         <div id="abstract-1" class="paper-abstract">
                             We provide the first causal evidence that structural transformation, or service sector expansion, has led to a decline in women's intrahousehold bargaining power in 15 Sub-Saharan African countries. Using two-way fixed effects and instrumental variable estimations, we show that this decline is particularly pronounced in countries with more restrictive gender norms. To ensure robustness, we further validate our findings by leveraging sub-national statistics and within-country variations. To reconcile this fact, we add a new feature --- social stigma against females working in the service sector --- into an otherwise standard structural transformation model. We show that structural transformation can reduce the female-to-male wage ratio and prevent female empowerment if the social stigma exceeds a threshold.
                         </div>
-                        </div>
                     </article>
 
-                </div>
-            </div>
-
-            <!-- Other Working Papers -->
-            <div class="research-category">
-                <h3 class="category-title">Other Working Papers</h3>
-                <div class="papers-grid">
                     <article class="paper-card" data-keywords="climate, flooding, inflation, trade, macroeconomic, spillover" data-category="development climate">
                         <div class="paper-meta">
                             <span class="paper-year-badge">2024</span>
@@ -1637,7 +1671,7 @@
                             </div>
                         </div>
                         <div class="paper-actions-inline">
-                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4816569" target="_blank" class="btn-secondary" title="Download PDF">
+                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4816569" target="_blank" class="btn-pdf" title="Download PDF">
                                 <i class="fas fa-file-pdf"></i>
                             </a>
                             <button class="abstract-toggle" onclick="toggleAbstract('abstract-flooding')">
