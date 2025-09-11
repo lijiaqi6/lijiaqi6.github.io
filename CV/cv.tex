@@ -12,7 +12,10 @@
 
 % --- BASIC SETUP ---
 % Single spacing
-\singlespacing
+\setstretch{1.0}
+
+% Reduce list spacing globally
+\setlist{nosep,itemsep=0pt,parsep=0pt,topsep=0pt}
 
 % Colors and hyperlinks
 \definecolor{darkblue}{RGB}{0,0,0}
@@ -36,7 +39,7 @@
 \newcommand{\cventry}[4]{
     \noindent\textbf{#1}\hfill\textbf{#2} \\
     \textit{#3}\hfill\textit{#4}
-    \vspace{0.5em}
+    \vspace{0.2em}
 }
 
 % For list items like publications or working papers
