@@ -1,0 +1,161 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- PACKAGES ---
+\usepackage[margin=1in]{geometry}
+\usepackage{times}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{tabularx}
+
+% --- BASIC SETUP ---
+% Colors and hyperlinks
+\definecolor{darkblue}{RGB}{0,0,0}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    urlcolor=darkblue,
+    citecolor=darkblue,
+}
+
+% Remove page numbers
+\pagenumbering{gobble}
+
+% --- SECTION FORMATTING ---
+\titleformat{\section}{\large\bfseries\color{darkblue}}{}{0em}{}[\vspace{-0.3em}\hrule\vspace{0.5em}]
+\titlespacing*{\section}{0pt}{1.5em}{0.5em}
+\titlespacing*{\subsection}{0pt}{1em}{0.3em}
+
+% --- CUSTOM COMMANDS ---
+% For education, positions, grants, etc.
+\newcommand{\cventry}[4]{
+    \noindent\textbf{#1}\hfill\textbf{#2} \\
+    \textit{#3}\hfill\textit{#4}
+    \vspace{0.5em}
+}
+
+% For list items like publications or working papers
+\newcommand{\cvitem}[2]{
+    \item \textbf{#1} \\ #2
+}
+
+% --- DOCUMENT START ---
+\begin{document}
+
+% --- HEADER ---
+\begin{center}
+    {\Huge\bfseries JIAQI LI} \\
+    \vspace{0.3em}
+    \href{https://lijiaqi6.github.io/}{lijiaqi6.github.io} $\cdot$ \href{mailto:j.li.51@warwick.ac.uk}{j.li.51@warwick.ac.uk}
+\end{center}
+\vspace{1em}
+
+% --- EDUCATION ---
+\section{Doctoral Studies}
+\cventry{Ph.D. in Economics, Expected 2025}{University of Warwick}{Coventry, UK}{}
+\vspace{-0.5em}
+\begin{itemize}[leftmargin=*, itemsep=0.2em]
+    \item[] \textbf{Dissertation:} ``Three Essays on Household Time Allocation''
+    \item[] \textbf{Research Fields:} Labor Economics, Development Economics
+    \item[] \textbf{Visits:} University College London (January-March 2023, Host: Professor Sir Richard Blundell), University of Mannheim (November 2024, Host: Professor Michèle Tertilt)
+\end{itemize}
+
+\section{Prior Education}
+\begin{itemize}[leftmargin=*, itemsep=0.2em]
+    \item 2021, M.Res. in Economics, \textit{University of Warwick}, Distinction
+    \item 2018, M.Sc. in Economics, \textit{University of Warwick}, Distinction
+    \item 2016, B.Sc. in Economics, \textit{Lanzhou University}, First Class
+\end{itemize}
+
+% --- WORKING PAPERS ---
+\section{Working Papers}
+\begin{itemize}[leftmargin=*, itemsep=0.3em]
+    \cvitem{The Shadow Child Penalty and Racial Inequality in Labour‑ and Marriage‑Market Risk [\href{https://lijiaqi6.github.io/li_race.pdf}{pdf}]}{}
+    \cvitem{Fathers, Time Investment and Human Capital Inequality [\href{https://lijiaqi6.github.io/Father.pdf}{pdf}] (with Yaolang Zhong)}{}
+    \cvitem{On the Way to School: Drought, Enrolment and Commuting Time [\href{https://lijiaqi6.github.io/Drought.pdf}{pdf}]}{}
+    \cvitem{Can Structural Transformation Increase Female Bargaining Power? [\href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4955252}{pdf}] (with Zoe Zhang)}{}
+    \cvitem{Flooding, Inflation and International Spillover [\href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4816569}{pdf}]}{}
+\end{itemize}
+
+% --- ADDITIONAL TRAINING ---
+\section{Additional Training}
+\begin{itemize}[leftmargin=*, itemsep=0.2em, label={}]
+    \item \textbf{2025} \quad Econometric Society Summer School in Dynamic Structural Econometrics (UCL)
+    \item \textbf{2024} \quad Econometric Society Summer School in Dynamic Structural Econometrics
+    \item \textbf{2023} \quad 24th IZA Summer School in Labor Economics
+    \item \textbf{2023} \quad Econometric Society Workshop Computational Macroeconomics
+    \item \textbf{2022} \quad HCEO-briq Summer School on Socioeconomic Inequality
+\end{itemize}
+
+% --- AWARDS AND GRANTS ---
+\section{Awards and Grants}
+\begin{itemize}[leftmargin=*, itemsep=0.2em]
+    \item Travel scholarship, 2023, \textit{Columbia University, IZA, Royal Economic Society, Michigan University}
+    \item Discretionary Research Fund (£7,596), 2022-2023, \textit{The University of Warwick}
+    \item STEG PhD Research Grant (£14,640, Principal Investigator), 2022, \textit{Centre for Economic Policy Research}
+    \item Travel grant (€315), 2022, \textit{European Economic Association}
+    \item LSE Research and Impact Fund (£11,778, Co-Investigator), 2022, \textit{London School of Economics}
+    \item Departmental Scholarship for PhD in Economics, 2019-2025, \textit{The University of Warwick}
+    \item Outstanding Undergraduate Scholarship, 2015, \textit{Chinese Ministry of Education}
+    \item Undergraduate Innovation and Entrepreneurship Research Grant, 2015, \textit{Lanzhou University}
+    \item National First Prize, 2009, \textit{Senior Secondary School}
+    \item Distinction Award, 2006, \textit{Junior Secondary School}
+\end{itemize}
+
+% --- SKILLS ---
+\section{Computer Skills Proficiency}
+\noindent Julia, Fortran, Stata, MATLAB, Python, R
+
+% --- POLICY REPORTS ---
+\section{Policy Reports}
+\begin{itemize}[leftmargin=*, itemsep=0.3em]
+    \cvitem{Are ‘Green’ Jobs Good Jobs? [\href{https://www.lse.ac.uk/granthaminstitute/wp-content/uploads/2021/05/Are-Green-Jobs-Good-Jobs.pdf}{pdf}]}{(with Mirko Draca, Sabrina Muller, Viet Nguyen-Tien, Capucine Riom and Anna Valero)}
+    \cvitem{Trends in job-related training and policies for building future skills into the recovery [\href{https://www.lse.ac.uk/granthaminstitute/wp-content/uploads/2021/01/Trends-in-job-related-training-and-policies-for-building-future-skills-into-the-recovery_final.pdf}{pdf}]}{(With Anna Valero and Guglielmo Ventura)}
+\end{itemize}
+
+% --- EMPLOYMENT ---
+\section{Employment}
+\begin{itemize}[leftmargin=*, itemsep=0.2em]
+    \item 2023, Data Analyst, \textit{Centre for Economic Performance, LSE}
+    \item 2022, Senior Teaching Assistant, \textit{University of Warwick}
+    \item 2018–2022, Research Assistant, \textit{Centre for Economic Performance, LSE}
+    \item 2021, Research Assistant, \textit{Grantham Research Institute, LSE}
+    \item 2021, Research Assistant, \textit{International Inequalities Institute, LSE}
+    \item 2018–2019, Research Assistant, \textit{University College London}
+    \item 2017–2018, Economist, \textit{National Institute of Economic and Social Research}
+    \item 2016, Journalist Intern, \textit{Xinhua National News Agency (Beijing, China)}
+\end{itemize}
+
+% --- PRESENTATIONS ---
+\section{Presentations}
+\begin{itemize}[leftmargin=*, itemsep=0.2em, label={}]
+    \item \textbf{2025} \quad Michigan
+    \item \textbf{2024} \quad Luxembourg, Mannheim Workshop in Quantitative Macroeconomics, Mannheim
+    \item \textbf{2023} \quad The Health Economists' Study Group Winter; SOLE (Philadelphia); Queen Mary; Warwick Macro Workshop; Columbia Graduate Summer School; Royal Economic Society PhD Conference; HEC Paris Economics PhD Conference; 24th IZA Summer School; Michigan University
+    \item \textbf{2022} \quad Aarhus University; SEHO (London); HCEO-briq Summer School (Bonn); EEA; European Association of Labour Economists Conference; Warwick CAGE Workshop, Warwick Labour Group, Warwick CAGE – AMES.
+    \item \textbf{2021} \quad Warwick CAGE AMES, CEP LSE, Royal Economic Society Conference 2021, HCEO-NES Summer School.
+    \item \textbf{2020} \quad Warwick CAGE AMES
+\end{itemize}
+
+% --- REFERENCES ---
+\section{References}
+\vspace{0.5em}
+\begin{tabularx}{\textwidth}{@{}X X X@{}}
+    \textbf{Professor Sonia Bhalotra} & \textbf{Professor Stefano Caria} & \textbf{Professor James Fenske} \\
+    Professor of Economics & Professor of Economics & Professor of Economics \\
+    University of Warwick & University of Warwick & University of Warwick \\
+    Coventry CV4 7AL, UK & Coventry CV4 7AL, UK & Coventry CV4 7AL, UK \\
+    \href{mailto:Sonia.Bhalotra@warwick.ac.uk}{Sonia.Bhalotra@warwick.ac.uk} & \href{mailto:stefano.caria@warwick.ac.uk}{stefano.caria@warwick.ac.uk} & \href{mailto:J.Fenske@warwick.ac.uk}{J.Fenske@warwick.ac.uk} \\
+\end{tabularx}
+\vspace{1em}
+\begin{center}
+    \textit{Letters of recommendation available upon request.}
+\end{center}
+
+\vfill
+\begin{center}
+    \small Last updated: \today
+\end{center}
+
+\end{document}
