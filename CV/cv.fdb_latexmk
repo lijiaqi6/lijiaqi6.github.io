@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1757680332.62862 "/Users/jiaqili/GitHub/web/CV/cv.tex" "cv.pdf" "cv" 1757680333.14258 0
-  "/Users/jiaqili/GitHub/web/CV/cv.tex" 1757680332.38197 8108 7e2e3e454fd8d3c0e35a2b8449e90f41 ""
+["pdflatex"] 1757681786.36964 "/Users/jiaqili/GitHub/web/CV/cv.tex" "cv.pdf" "cv" 1757681786.89696 0
+  "/Users/jiaqili/GitHub/web/CV/cv.tex" 1757681785.07019 8369 704e2523fb78125b24a7eefc8f06af27 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -79,9 +79,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1720195549.70482 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1720195502 8221446 06539904cfebb584c77b7c3fc6065adf ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "cv.aux" 1757680333.10271 1279 5ee38621d4df3002e5ad4d53f932a734 "pdflatex"
-  "cv.out" 1757680333.10309 1234 b7142c334855de989740a1fdbf223f26 "pdflatex"
-  "cv.tex" 1757680332.38197 8108 7e2e3e454fd8d3c0e35a2b8449e90f41 ""
+  "cv.aux" 1757681786.85735 1393 c919a01bc5cbb8a7110b50680f8a2bc7 "pdflatex"
+  "cv.out" 1757681786.8577 1365 9b2e3bcebe2ac606ca5dc7f404ea4ae2 "pdflatex"
+  "cv.tex" 1757681785.07019 8369 704e2523fb78125b24a7eefc8f06af27 ""
   (generated)
   "cv.aux"
   "cv.log"
