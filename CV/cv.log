@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.5)  12 SEP 2025 13:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.5)  12 SEP 2025 13:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -265,7 +265,7 @@ File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count280
 \l__pdf_internal_box=\box55
 )
-(./cv.aux)
+No file cv.aux.
 \openout1 = `cv.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
@@ -286,7 +286,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
 LaTeX Font Info:    ... okay on input line 51.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 51.
 LaTeX Font Info:    ... okay on input line 51.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -322,10 +321,8 @@ LaTeX Font Info:    ... okay on input line 51.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring ON on input line 51.
-(./cv.out) (./cv.out)
 \@outlinefile=\write3
 \openout3 = `cv.out'.
-
 
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -396,14 +393,21 @@ l.168 \end{document}
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-Package rerunfilecheck Info: File `cv.out' has not changed.
-(rerunfilecheck)             Checksum: B7142C334855DE989740A1FDBF223F26;1234.
+
+
+Package rerunfilecheck Warning: File `cv.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `cv.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  B7142C334855DE989740A1FDBF223F26;1234.
  ) 
 Here is how much of TeX's memory you used:
- 9812 strings out of 474116
- 151571 string characters out of 5743683
+ 9793 strings out of 474116
+ 151378 string characters out of 5743683
  1942187 words of memory out of 5000000
- 32064 multiletter control sequences out of 15000+600000
+ 32051 multiletter control sequences out of 15000+600000
  571868 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,8n,79p,360b,560s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -411,10 +415,10 @@ Here is how much of TeX's memory you used:
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/loc
 al/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive
 /2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on cv.pdf (3 pages, 67480 bytes).
+Output written on cv.pdf (3 pages, 66877 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 70 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  12 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
