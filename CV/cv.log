@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.5)  12 SEP 2025 11:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.5)  12 SEP 2025 11:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -411,7 +411,7 @@ Here is how much of TeX's memory you used:
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/loc
 al/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive
 /2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on cv.pdf (3 pages, 67464 bytes).
+Output written on cv.pdf (3 pages, 67468 bytes).
 PDF statistics:
  101 PDF objects out of 1000 (max. 8388607)
  81 compressed objects within 1 object stream
